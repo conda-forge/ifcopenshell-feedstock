@@ -9,7 +9,7 @@ channel_targets:
 cxx_compiler:
 - vs2015
 icu:
-- '58'
+- '64.2'
 libxml2:
 - '2.9'
 occt:
