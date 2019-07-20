@@ -3,7 +3,7 @@ About ifcopenshell
 
 Home: http://ifcopenshell.org
 
-Package license: LGPL3
+Package license: LGPL-3.0
 
 Feedstock license: BSD 3-Clause
 
