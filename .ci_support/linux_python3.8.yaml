@@ -19,7 +19,7 @@ icu:
 libxml2:
 - '2.9'
 occt:
-- '7.3'
+- '7.4'
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
