@@ -1,15 +1,15 @@
-{% set version = "v0.6.0b0" %}
+{% set version = "0.5.0-preview2" %}
 
 package:
   name: ifcopenshell
-  version: {{ version }}
+  version: v{{ version }}
 
 source:
-  url: https://github.com/IfcOpenShell/IfcOpenShell/archive/{{ version }}.tar.gz
-  sha256: d4a9a28b715512659670f2a101bef64363df7808a64ed30e7019161caae6a914
+  url: https://github.com/IfcOpenShell/IfcOpenShell/archive/v{{ version }}.tar.gz
+  sha256: 01c8395995ec4e2ef2fc1fd49cda2dfb99d2c6e679c2a957795630d7b01866d8
 
 build:
-  number: 4
+  number: 0
   skip: True  # [py2k]
 
 requirements:
