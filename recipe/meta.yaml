@@ -5,8 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/IfcOpenShell/IfcOpenShell/archive/{{ version }}.tar.gz
-  sha256: 798d4e9ed2ef72c72db7119e8928dc8254451cfab0f7a1b71d6b6a155499e2c4
+  url: https://github.com/lawsonAGMT/IfcOpenShell/archive/my-v6.0.0.tar.gz
+  sha256: a41e014f8b0fa40ea22f04e84e136effeda9392a0b8e024c2a822a0247ac0031
 
 build:
   number: 0
