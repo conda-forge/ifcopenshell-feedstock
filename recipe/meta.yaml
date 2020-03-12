@@ -16,10 +16,10 @@ requirements:
   build:
     - cmake
     - ninja
-    - swig 3.*
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
+    - swig 3.*
     - python
     - icu
     - boost-cpp
