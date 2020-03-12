@@ -1,12 +1,12 @@
-{% set version = "v0.6.0" %}
+{% set version = "v0.6.0b0" %}
 
 package:
   name: ifcopenshell
   version: {{ version }}
 
 source:
-  url: https://github.com/lawsonAGMT/IfcOpenShell/archive/my-v6.0.0.tar.gz
-  sha256: a41e014f8b0fa40ea22f04e84e136effeda9392a0b8e024c2a822a0247ac0031
+  url: https://github.com/IfcOpenShell/IfcOpenShell/archive/{{ version }}.tar.gz
+  sha256: d4a9a28b715512659670f2a101bef64363df7808a64ed30e7019161caae6a914
 
 build:
   number: 0
