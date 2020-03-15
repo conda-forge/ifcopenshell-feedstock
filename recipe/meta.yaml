@@ -15,7 +15,7 @@ build:
 requirements:
   build:
     - cmake
-    - ninja 1.10 *_0
+    - ninja
     - swig 3.*
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
