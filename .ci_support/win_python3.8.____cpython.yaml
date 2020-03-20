@@ -1,0 +1,30 @@
+boost_cpp:
+- '1.72'
+c_compiler:
+- vs2015
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- vs2015
+icu:
+- '64.2'
+libxml2:
+- '2.9'
+occt:
+- '7.4'
+pin_run_as_build:
+  boost-cpp:
+    max_pin: x.x.x
+  icu:
+    max_pin: x
+  libxml2:
+    max_pin: x.x
+  occt:
+    max_pin: x.x
+  python:
+    min_pin: x.x
+    max_pin: x.x
+python:
+- 3.8.* *_cpython
