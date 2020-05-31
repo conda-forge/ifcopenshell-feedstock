@@ -15,7 +15,7 @@ cxx_compiler_version:
 docker_image:
 - condaforge/linux-anvil-comp7
 icu:
-- '64.2'
+- '67'
 libxml2:
 - '2.9'
 occt:
