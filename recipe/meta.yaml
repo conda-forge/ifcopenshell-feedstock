@@ -21,13 +21,11 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
-    - icu
     - boost-cpp
     - occt
     - libxml2
   run:
     - python
-    - icu
     - boost-cpp
     - occt
     - libxml2
