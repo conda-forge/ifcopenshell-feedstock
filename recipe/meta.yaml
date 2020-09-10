@@ -36,7 +36,7 @@ test:
 
 about:
   home: http://ifcopenshell.org
-  license: LGPL-3.0
+  license: LGPL-3.0-or-later
   license_file: COPYING
   summary: 'IfcOpenShell is a library to support the IFC file format'
   description: |
