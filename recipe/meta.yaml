@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/IfcOpenShell/IfcOpenShell/archive/{{ version }}.tar.gz
-  sha256: b8f20126be0e38af9e664d2a963b45983d3188d5568de94bc680cf8fd4d72560
+  sha256: 0be672e1484aebc3041d285b818515f690b86711281e422b8122d7f93a6011ac
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py2k]
 
 requirements:
