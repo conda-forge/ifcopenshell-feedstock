@@ -3,6 +3,9 @@ mkdir build && cd build
 # this disables linking to python DSO
 if [ `uname` == Darwin ]; then
     export  LDFLAGS="$LDFLAGS  -Wl,-flat_namespace,-undefined,suppress"
+	LIBXML2="$PREFIX/lib/libxml2.dylib"
+else
+	LIBXML2="$PREFIX/lib/libxml2.so"
 fi
 
 cmake -G "Ninja" \
@@ -18,8 +21,9 @@ cmake -G "Ninja" \
  -D BUILD_GEOMSERVER:BOOL=OFF \
  -D BUILD_CONVERT:BOOL=OFF \
  -D BUILD_IFCMAX:BOOL=OFF \
- -D IFCXML_SUPPORT:BOOL=OFF \
+ -D IFCXML_SUPPORT:BOOL=ON \
  -D LIBXML2_INCLUDE_DIR:FILEPATH=$PREFIX/include/libxml2 \
+ -D LIBXML2_LIBRARIES:FILEPATH=${LIBXML2} \
  ../cmake
 
 ninja install
