@@ -20,4 +20,4 @@ cmake -G "Ninja" \
  -D LIBXML2_INCLUDE_DIR:FILEPATH=$PREFIX/include/libxml2 \
  ../cmake
 
-ninja install -j1
+ninja install
