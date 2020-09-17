@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/IfcOpenShell/IfcOpenShell/archive/{{ version }}.tar.gz
-  sha256: 0be672e1484aebc3041d285b818515f690b86711281e422b8122d7f93a6011ac
+  sha256: d11e1fb4b012f8e8717511c8ac97bf3d6cabf957bfdef50f564d19d9976f8e86
 
 build:
   number: 1
@@ -23,12 +23,12 @@ requirements:
     - python
     - boost-cpp
     - occt
-    - libxml2
+    # - libxml2
   run:
     - python
     - boost-cpp
     - occt
-    - libxml2
+    # - libxml2
 
 test:
   imports:
