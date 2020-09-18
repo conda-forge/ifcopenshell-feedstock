@@ -4,6 +4,8 @@ REM Remove dot from PY_VER for use in library name
 REM From https://github.com/tpaviot/pythonocc-core/blob/master/ci/conda/bld.bat
 set MY_PY_VER=%PY_VER:.=%
 
+set LIBXML2="%LIBRARY_PREFIX%/lib/libxml2.lib"
+
 cmake -G "Ninja" ^
  -D CMAKE_BUILD_TYPE:STRING=Release ^
  -D CMAKE_INSTALL_PREFIX:FILEPATH="%LIBRARY_PREFIX%" ^
@@ -20,6 +22,7 @@ cmake -G "Ninja" ^
  -D BUILD_CONVERT:BOOL=OFF ^
  -D BUILD_IFCMAX:BOOL=OFF ^
  -D IFCXML_SUPPORT:BOOL=ON ^
+ -D LIBXML2_LIBRARIES:FILEPATH=%LIBXML2% ^
  -D PYTHON_EXECUTABLE:FILEPATH=%PREFIX%/python ^
  -D PYTHON_LIBRARY:FILEPATH="%PREFIX%"/libs/python%MY_PY_VER%.lib ^
  ../cmake
