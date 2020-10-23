@@ -5,9 +5,13 @@ Home: http://ifcopenshell.org
 
 Package license: LGPL-3.0-or-later
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ifcopenshell-feedstock/blob/master/LICENSE.txt)
 
 Summary: IfcOpenShell is a library to support the IFC file format
+
+Development: https://github.com/IfcOpenShell/IfcOpenShell
+
+Documentation: http://ifcopenshell.org/
 
 IfcOpenShell is an open source (LGPL) software library for
 working with the Industry Foundation Classes (IFC) file format.
@@ -52,6 +56,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_boost_cpp1.72.0python3.9.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost_cpp1.72.0python3.9.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_boost_cpp1.74.0python3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=master">
@@ -70,6 +81,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost_cpp1.74.0python3.8.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_boost_cpp1.74.0python3.9.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost_cpp1.74.0python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -94,6 +112,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_64_boost_cpp1.72.0python3.9.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost_cpp1.72.0python3.9.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64_boost_cpp1.74.0python3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=master">
@@ -112,6 +137,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost_cpp1.74.0python3.8.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_boost_cpp1.74.0python3.9.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost_cpp1.74.0python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -136,6 +168,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>win_64_boost_cpp1.72.0python3.9.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=master&jobName=win&configuration=win_64_boost_cpp1.72.0python3.9.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>win_64_boost_cpp1.74.0python3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=master">
@@ -154,6 +193,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=master&jobName=win&configuration=win_64_boost_cpp1.74.0python3.8.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_boost_cpp1.74.0python3.9.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=master&jobName=win&configuration=win_64_boost_cpp1.74.0python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr>
