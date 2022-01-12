@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/IfcOpenShell/IfcOpenShell/archive/{{ version }}.tar.gz
-  sha256: 4549f6747114c522025d0fa50494ce58626e0f7fa237c235c43d3300affb9976
+  sha256: da22910d83472886eb53693ced79f5b229d7898c76a73bc5ac7003a7c913af82
 
 build:
   number: 6
