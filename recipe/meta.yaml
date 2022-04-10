@@ -1,4 +1,4 @@
-{% set version = "v0.6.0" %}
+{% set version = "v0.7.0alpha" %}
 
 package:
   name: ifcopenshell
@@ -9,7 +9,7 @@ source:
   sha256: da22910d83472886eb53693ced79f5b229d7898c76a73bc5ac7003a7c913af82
 
 build:
-  number: 7
+  number: 0
   skip: True  # [py2k]
 
 requirements:
@@ -24,11 +24,17 @@ requirements:
     - boost-cpp
     - occt
     - libxml2
+    - cgal
+    - hdf5
+    - mpfr
   run:
     - python
     - boost-cpp
     - occt
     - libxml2
+    - cgal
+    - hdf5
+    - mpfr
 
 test:
   imports:
