@@ -28,6 +28,7 @@ requirements:
     - cgal
     - hdf5
     - mpfr
+    - gmp
   run:
     - python
     - boost-cpp
@@ -36,6 +37,7 @@ requirements:
     - cgal
     - hdf5
     - mpfr
+    - gmp
 
 test:
   imports:
