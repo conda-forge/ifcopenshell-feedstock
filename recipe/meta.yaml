@@ -25,7 +25,7 @@ requirements:
     - boost-cpp
     - occt
     - libxml2
-    - cgal
+    - cgal-cpp
     - hdf5
     - mpfr
     - gmp  # [unix]
@@ -35,7 +35,7 @@ requirements:
     - boost-cpp
     - occt
     - libxml2
-    - cgal
+    - cgal-cpp
     - hdf5
     - mpfr
     - gmp  # [unix]
