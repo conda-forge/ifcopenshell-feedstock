@@ -27,6 +27,8 @@ cmake -G "Ninja" ^
  -D PYTHON_LIBRARY:FILEPATH="%PREFIX%/libs/python%MY_PY_VER%.lib" ^
  -D GMP_INCLUDE_DIR:FILEPATH="%LIBRARY_PREFIX%\include" ^
  -D GMP_LIBRARY_DIR:FILEPATH="%LIBRARY_PREFIX%\lib" ^
+ -D HDF5_INCLUDE_DIR:FILEPATH="%LIBRARY_PREFIX%\include" ^
+ -D HDF5_LIBRARY_DIR:FILEPATH="%LIBRARY_PREFIX%\lib" ^
  ../cmake
  
 if errorlevel 1 exit 1
