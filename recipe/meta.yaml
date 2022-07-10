@@ -1,4 +1,4 @@
-{% set version = "v0.7.0a0" %}
+{% set version = "v0.7.0a3" %}
 
 package:
   name: ifcopenshell
@@ -6,7 +6,7 @@ package:
 
 source:
   git_url: https://github.com/IfcOpenShell/IfcOpenShell
-  git_tag: v0.7.0a0
+  git_tag: {{ version }}
   # sha256: ad488046939bf281025a75f8c656db9dc89a54d8b6539f8169acabba90f6a8ac
 
 build:
