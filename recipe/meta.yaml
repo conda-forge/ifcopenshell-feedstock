@@ -14,7 +14,7 @@ source:
     
   - url: https://github.com/opensourceBIM/python-mvdxml/archive/83c12fa494b9d6a5a370d8525dc1f76aa5c89d8d.tar.gz
     folder: src/ifcopenshell-python/ifcopenshell/mvd
-    sha256: 2bf8cabd6364fbb09b4e7351397beb631d47d9574ee89c98510066acec3a58ac
+    sha256: 3a332aae707967e609dcab44a118a88ec270c551e7222eb53fc8ba809e9e7a0d
 
   - url: https://github.com/IfcOpenShell/svgfill/archive/f9102b1e9f58e2c3bf9923c1eafa0373eeb872f5.tar.gz
     folder: src/svgfill
