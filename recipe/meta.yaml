@@ -5,9 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  git_url: https://github.com/IfcOpenShell/IfcOpenShell
-  git_tag: {{ version }}
-  # sha256: ad488046939bf281025a75f8c656db9dc89a54d8b6539f8169acabba90f6a8ac
+  url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/{{ version }}.tar.gz
+  sha256: e789a4545de50aae064ac2f3568ee41673c4391ab78751a4a034b7ca5a9a149e
 
 build:
   number: 0
