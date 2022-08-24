@@ -268,5 +268,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@Krande](https://github.com/Krande/)
 * [@looooo](https://github.com/looooo/)
 
