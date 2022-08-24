@@ -1,15 +1,35 @@
-{% set version = "v0.6.0" %}
+{% set version = "v0.7.0a4" %}
 
 package:
   name: ifcopenshell
   version: {{ version }}
 
 source:
-  url: https://github.com/IfcOpenShell/IfcOpenShell/archive/{{ version }}.tar.gz
-  sha256: da22910d83472886eb53693ced79f5b229d7898c76a73bc5ac7003a7c913af82
+  - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/{{ version }}.tar.gz
+    sha256: e789a4545de50aae064ac2f3568ee41673c4391ab78751a4a034b7ca5a9a149e
+    
+  - url: https://github.com/IfcOpenShell/files/archive/ed6b97983ff1324a0eaec0fd676ab58051cf3059.tar.gz
+    folder: test/input
+    sha256: 2bf8cabd6364fbb09b4e7351397beb631d47d9574ee89c98510066acec3a58ac
+    
+  - url: https://github.com/opensourceBIM/python-mvdxml/archive/83c12fa494b9d6a5a370d8525dc1f76aa5c89d8d.tar.gz
+    folder: src/ifcopenshell-python/ifcopenshell/mvd
+    sha256: 3a332aae707967e609dcab44a118a88ec270c551e7222eb53fc8ba809e9e7a0d
+
+  - url: https://github.com/IfcOpenShell/svgfill/archive/f9102b1e9f58e2c3bf9923c1eafa0373eeb872f5.tar.gz
+    folder: src/svgfill
+    sha256: b0b3f3b98a204a7315ec7cca24278600d192bdb7ae8462e10eca0cd0aeaf52d8
+
+  - url: https://github.com/IfcOpenShell/ids-test-files/archive/adadc7740b7337f4cb0935ec8e84ba30ed4ca10d.tar.gz
+    folder: src/ifcopenshell-python/test/Sample-BIM-Files
+    sha256: d0b86d456a8575d6b72186a01f2fb2ba93b86058ce6b178045a6d11e3468e3f6
+
+  - url: https://github.com/svgpp/svgpp/archive/15da1891e576e8ef66dbe90e8e1a776dccea889d.tar.gz
+    folder: src/svgfill/3rdparty/svgpp
+    sha256: 5364b6a2d49c37fe3d0669366ec07348378868d1f0d94674cd1af97229adc558
 
 build:
-  number: 6
+  number: 0
   skip: True  # [py2k]
 
 requirements:
@@ -24,11 +44,21 @@ requirements:
     - boost-cpp
     - occt
     - libxml2
+    - cgal-cpp
+    - hdf5
+    - mpfr
+    - gmp  # [unix]
+    - mpir  # [win]
   run:
     - python
     - boost-cpp
     - occt
     - libxml2
+    - cgal-cpp
+    - hdf5
+    - mpfr
+    - gmp  # [unix]
+    - mpir  # [win]
 
 test:
   imports:
@@ -48,3 +78,4 @@ about:
 extra:
   recipe-maintainers:
     - looooo
+    - Krande
