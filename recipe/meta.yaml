@@ -24,6 +24,10 @@ source:
     folder: src/ifcopenshell-python/test/Sample-BIM-Files
     sha256: d0b86d456a8575d6b72186a01f2fb2ba93b86058ce6b178045a6d11e3468e3f6
 
+  - url: https://github.com/svgpp/svgpp/archive/15da1891e576e8ef66dbe90e8e1a776dccea889d.tar.gz
+    folder: src/svgfill/3rdparty/svgpp
+    sha256: 5364b6a2d49c37fe3d0669366ec07348378868d1f0d94674cd1af97229adc558
+
 build:
   number: 0
   skip: True  # [py2k]
