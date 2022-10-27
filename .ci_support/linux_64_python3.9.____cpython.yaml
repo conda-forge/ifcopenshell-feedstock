@@ -21,7 +21,7 @@ gmp:
 hdf5:
 - 1.12.2
 libxml2:
-- '2.9'
+- '2.10'
 mpfr:
 - '4'
 occt:
@@ -29,12 +29,6 @@ occt:
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
-  gmp:
-    max_pin: x
-  libxml2:
-    max_pin: x.x
-  mpfr:
-    max_pin: x
   occt:
     max_pin: x.x
   python:
