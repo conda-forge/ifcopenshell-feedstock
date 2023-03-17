@@ -1,4 +1,6 @@
-{% set version = "v0.7.0a6" %}
+{% set version = "v0.7.0a8" %}
+{% set data = load_setup_py_data(from_recipe_dir=True) %}
+{% set description = data.get('long_description') %}
 
 package:
   name: ifcopenshell
@@ -6,7 +8,7 @@ package:
 
 source:
   - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/{{ version }}.tar.gz
-    sha256: 6dc31da6fffb3d9d3fd3a7adced39b016e566cf6ff2614c1da0049f8bc0778f4
+    sha256: c223ff07d70abe19adbbb3ba3213ca9d338cef779b9da3daff8adfb4235aae8b
     
   - url: https://github.com/IfcOpenShell/files/archive/ed6b97983ff1324a0eaec0fd676ab58051cf3059.tar.gz
     folder: test/input
@@ -65,14 +67,13 @@ test:
     - ifcopenshell
 
 about:
-  home: http://ifcopenshell.org
+  home: https://ifcopenshell.org
   license: LGPL-3.0-or-later
   license_file: COPYING
   summary: 'IfcOpenShell is a library to support the IFC file format'
   description: |
-    IfcOpenShell is an open source (LGPL) software library for 
-    working with the Industry Foundation Classes (IFC) file format.
-  doc_url: http://ifcopenshell.org/
+    {{ description }}
+  doc_url: https://ifcopenshell.org/
   dev_url: https://github.com/IfcOpenShell/IfcOpenShell
 
 extra:
