@@ -17,9 +17,11 @@ diff --git a/cmake/CMakeLists.txt b/cmake/CMakeLists.txt
                  # Windows
 -                set(zlib_post zlib)
 -                set(lib_ext lib)
++                find_package(HDF5 COMPONENTS CXX)
++                if (HDF5_FOUND)
++                    set(HDF5_LIBRARIES ${HDF5_CXX_LIBRARIES})
++                endif()
 +                list(APPEND HDF5_LIBRARIES
-+                    "${HDF5_LIBRARY_DIR}/hdf5_cpp.lib"
-+                    "${HDF5_LIBRARY_DIR}/hdf5.lib"
 +                    "${HDF5_LIBRARY_DIR}/zlib.lib"
 +                )
              elseif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
