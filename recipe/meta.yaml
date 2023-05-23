@@ -46,7 +46,7 @@ requirements:
   host:
     - python
     - boost-cpp
-    - occt
+    - occt=*=novtk*
     - libxml2
     - cgal-cpp
     - hdf5
@@ -57,7 +57,7 @@ requirements:
   run:
     - python
     - boost-cpp
-    - occt
+    - occt=*=novtk*
     - libxml2
     - cgal-cpp
     - hdf5
