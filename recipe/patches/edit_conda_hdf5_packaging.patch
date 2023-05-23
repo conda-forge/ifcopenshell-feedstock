@@ -7,8 +7,8 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 ===================================================================
 diff --git a/cmake/CMakeLists.txt b/cmake/CMakeLists.txt
 --- a/cmake/CMakeLists.txt	(revision 535e974cc334afd4f99abb820853ff49c5964b90)
-+++ b/cmake/CMakeLists.txt	(date 1684823786831)
-@@ -506,25 +506,29 @@
++++ b/cmake/CMakeLists.txt	(date 1684850176762)
+@@ -506,25 +506,31 @@
  
          ELSE()
              MESSAGE(STATUS "Packaging hdf5 and zlib for conda distribution")
