@@ -1,11 +1,11 @@
-About ifcopenshell
-==================
+About ifcopenshell-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ifcopenshell-feedstock/blob/main/LICENSE.txt)
 
 Home: http://ifcopenshell.org
 
 Package license: LGPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ifcopenshell-feedstock/blob/main/LICENSE.txt)
 
 Summary: IfcOpenShell is a library to support the IFC file format
 
