@@ -1,4 +1,4 @@
-{% set version = "v0.7.0a9" %}
+{% set version = "v0.7.0a10" %}
 
 # Bump 0
 
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/{{ version }}.tar.gz
-    sha256: b73811030f687b686e3541b44d2838eca09d5961a45460be447acdf4630ac089
+    sha256: 953d8d1ff52d0eabc6764b509ebaef7188a8d908237a32636a9857584981078d
     patches:
       - patches/edit_conda_hdf5_packaging.patch  # [win]
     
@@ -40,7 +40,7 @@ requirements:
   build:
     - cmake
     - ninja
-    - swig 3.*
+    - swig 4.*
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
