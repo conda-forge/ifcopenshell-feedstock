@@ -9,13 +9,13 @@ channel_targets:
 cxx_compiler:
 - vs2019
 hdf5:
-- 1.12.2
+- 1.14.1
 libxml2:
-- '2.10'
+- '2.11'
 mpfr:
 - '4'
 occt:
-- 7.7.2
+- 7.7.0
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x

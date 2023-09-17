@@ -17,9 +17,9 @@ cxx_compiler_version:
 gmp:
 - '6'
 hdf5:
-- 1.12.2
+- 1.14.1
 libxml2:
-- '2.10'
+- '2.11'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 mpfr:

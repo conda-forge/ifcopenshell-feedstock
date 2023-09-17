@@ -19,9 +19,9 @@ docker_image:
 gmp:
 - '6'
 hdf5:
-- 1.12.2
+- 1.14.1
 libxml2:
-- '2.10'
+- '2.11'
 mpfr:
 - '4'
 occt:
