@@ -45,7 +45,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
-    - boost-cpp
+    - libboost-devel
     - occt
     - libxml2
     - cgal-cpp
@@ -56,7 +56,6 @@ requirements:
     - zlib
   run:
     - python
-    - boost-cpp
     - {{ pin_compatible('occt', max_pin='x.x.x') }}
     - {{ pin_compatible('cgal-cpp', max_pin='x.x.x') }}
     - libxml2
