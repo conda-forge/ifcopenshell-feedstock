@@ -266,339 +266,227 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_occt7.7.1__all_python3.10.____cpython</td>
+              <td>linux_64_occt7.7.2__all_python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.1__all_python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.2__all_python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_occt7.7.1__all_python3.11.____cpython</td>
+              <td>linux_64_occt7.7.2__all_python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.1__all_python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.2__all_python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_occt7.7.1__all_python3.8.____cpython</td>
+              <td>linux_64_occt7.7.2__all_python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.1__all_python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.2__all_python3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_occt7.7.1__all_python3.9.____cpython</td>
+              <td>linux_64_occt7.7.2__all_python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.1__all_python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.2__all_python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_occt7.7.1__novtk_python3.10.____cpython</td>
+              <td>linux_64_occt7.7.2__novtk_python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.1__novtk_python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.2__novtk_python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_occt7.7.1__novtk_python3.11.____cpython</td>
+              <td>linux_64_occt7.7.2__novtk_python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.1__novtk_python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.2__novtk_python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_occt7.7.1__novtk_python3.8.____cpython</td>
+              <td>linux_64_occt7.7.2__novtk_python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.1__novtk_python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.2__novtk_python3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_occt7.7.1__novtk_python3.9.____cpython</td>
+              <td>linux_64_occt7.7.2__novtk_python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.1__novtk_python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.2__novtk_python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_occt7.7.2python3.10.____cpython</td>
+              <td>osx_64_occt7.7.2__all_python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.2python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.2__all_python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_occt7.7.2python3.11.____cpython</td>
+              <td>osx_64_occt7.7.2__all_python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.2python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.2__all_python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_occt7.7.2python3.8.____cpython</td>
+              <td>osx_64_occt7.7.2__all_python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.2python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.2__all_python3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_occt7.7.2python3.9.____cpython</td>
+              <td>osx_64_occt7.7.2__all_python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_occt7.7.2python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.2__all_python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_occt7.7.1__all_python3.10.____cpython</td>
+              <td>osx_64_occt7.7.2__novtk_python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.1__all_python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.2__novtk_python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_occt7.7.1__all_python3.11.____cpython</td>
+              <td>osx_64_occt7.7.2__novtk_python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.1__all_python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.2__novtk_python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_occt7.7.1__all_python3.8.____cpython</td>
+              <td>osx_64_occt7.7.2__novtk_python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.1__all_python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.2__novtk_python3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_occt7.7.1__all_python3.9.____cpython</td>
+              <td>osx_64_occt7.7.2__novtk_python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.1__all_python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.2__novtk_python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_occt7.7.1__novtk_python3.10.____cpython</td>
+              <td>osx_arm64_occt7.7.2__all_python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.1__novtk_python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.2__all_python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_occt7.7.1__novtk_python3.11.____cpython</td>
+              <td>osx_arm64_occt7.7.2__all_python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.1__novtk_python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.2__all_python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_occt7.7.1__novtk_python3.8.____cpython</td>
+              <td>osx_arm64_occt7.7.2__all_python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.1__novtk_python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.2__all_python3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_occt7.7.1__novtk_python3.9.____cpython</td>
+              <td>osx_arm64_occt7.7.2__all_python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.1__novtk_python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.2__all_python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_occt7.7.2python3.10.____cpython</td>
+              <td>osx_arm64_occt7.7.2__novtk_python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.2python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.2__novtk_python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_occt7.7.2python3.11.____cpython</td>
+              <td>osx_arm64_occt7.7.2__novtk_python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.2python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.2__novtk_python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_occt7.7.2python3.8.____cpython</td>
+              <td>osx_arm64_occt7.7.2__novtk_python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.2python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.2__novtk_python3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_occt7.7.2python3.9.____cpython</td>
+              <td>osx_arm64_occt7.7.2__novtk_python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_occt7.7.2python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.2__novtk_python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_occt7.7.1__all_python3.10.____cpython</td>
+              <td>win_64_occt7.7.2__all_python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.1__all_python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.2__all_python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_occt7.7.1__all_python3.11.____cpython</td>
+              <td>win_64_occt7.7.2__all_python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.1__all_python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.2__all_python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_occt7.7.1__all_python3.8.____cpython</td>
+              <td>win_64_occt7.7.2__all_python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.1__all_python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.2__all_python3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_occt7.7.1__all_python3.9.____cpython</td>
+              <td>win_64_occt7.7.2__all_python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.1__all_python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.2__all_python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_occt7.7.1__novtk_python3.10.____cpython</td>
+              <td>win_64_occt7.7.2__novtk_python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.1__novtk_python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.2__novtk_python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_occt7.7.1__novtk_python3.11.____cpython</td>
+              <td>win_64_occt7.7.2__novtk_python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.1__novtk_python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.2__novtk_python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_occt7.7.1__novtk_python3.8.____cpython</td>
+              <td>win_64_occt7.7.2__novtk_python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.1__novtk_python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.2__novtk_python3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_occt7.7.1__novtk_python3.9.____cpython</td>
+              <td>win_64_occt7.7.2__novtk_python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.1__novtk_python3.9.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_occt7.7.2python3.10.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.2python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_occt7.7.2python3.11.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.2python3.11.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_occt7.7.2python3.8.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.2python3.8.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_occt7.7.2python3.9.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_occt7.7.2python3.9.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_occt7.7.1__all_python3.10.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.1__all_python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_occt7.7.1__all_python3.11.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.1__all_python3.11.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_occt7.7.1__all_python3.8.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.1__all_python3.8.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_occt7.7.1__all_python3.9.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.1__all_python3.9.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_occt7.7.1__novtk_python3.10.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.1__novtk_python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_occt7.7.1__novtk_python3.11.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.1__novtk_python3.11.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_occt7.7.1__novtk_python3.8.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.1__novtk_python3.8.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_occt7.7.1__novtk_python3.9.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.1__novtk_python3.9.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_occt7.7.2python3.10.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.2python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_occt7.7.2python3.11.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.2python3.11.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_occt7.7.2python3.8.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.2python3.8.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_occt7.7.2python3.9.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.2python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=win&configuration=win%20win_64_occt7.7.2__novtk_python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr>
