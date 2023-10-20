@@ -14,6 +14,9 @@ jobs:
       win_64_occt7.7.2__all_python3.11.____cpython:
         CONFIG: win_64_occt7.7.2__all_python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
+      win_64_occt7.7.2__all_python3.12.____cpython:
+        CONFIG: win_64_occt7.7.2__all_python3.12.____cpython
+        UPLOAD_PACKAGES: 'True'
       win_64_occt7.7.2__all_python3.8.____cpython:
         CONFIG: win_64_occt7.7.2__all_python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -25,6 +28,9 @@ jobs:
         UPLOAD_PACKAGES: 'True'
       win_64_occt7.7.2__novtk_python3.11.____cpython:
         CONFIG: win_64_occt7.7.2__novtk_python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_occt7.7.2__novtk_python3.12.____cpython:
+        CONFIG: win_64_occt7.7.2__novtk_python3.12.____cpython
         UPLOAD_PACKAGES: 'True'
       win_64_occt7.7.2__novtk_python3.8.____cpython:
         CONFIG: win_64_occt7.7.2__novtk_python3.8.____cpython
