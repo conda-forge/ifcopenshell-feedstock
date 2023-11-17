@@ -8,6 +8,18 @@ jobs:
     vmImage: macOS-11
   strategy:
     matrix:
+      osx_64_occt7.6.3__all_python3.10.____cpython:
+        CONFIG: osx_64_occt7.6.3__all_python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+      osx_64_occt7.6.3__all_python3.11.____cpython:
+        CONFIG: osx_64_occt7.6.3__all_python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
+      osx_64_occt7.6.3__all_python3.8.____cpython:
+        CONFIG: osx_64_occt7.6.3__all_python3.8.____cpython
+        UPLOAD_PACKAGES: 'True'
+      osx_64_occt7.6.3__all_python3.9.____cpython:
+        CONFIG: osx_64_occt7.6.3__all_python3.9.____cpython
+        UPLOAD_PACKAGES: 'True'
       osx_64_occt7.7.2__all_python3.10.____cpython:
         CONFIG: osx_64_occt7.7.2__all_python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -31,6 +43,18 @@ jobs:
         UPLOAD_PACKAGES: 'True'
       osx_64_occt7.7.2__novtk_python3.9.____cpython:
         CONFIG: osx_64_occt7.7.2__novtk_python3.9.____cpython
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_occt7.6.3__all_python3.10.____cpython:
+        CONFIG: osx_arm64_occt7.6.3__all_python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_occt7.6.3__all_python3.11.____cpython:
+        CONFIG: osx_arm64_occt7.6.3__all_python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_occt7.6.3__all_python3.8.____cpython:
+        CONFIG: osx_arm64_occt7.6.3__all_python3.8.____cpython
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_occt7.6.3__all_python3.9.____cpython:
+        CONFIG: osx_arm64_occt7.6.3__all_python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
       osx_arm64_occt7.7.2__all_python3.10.____cpython:
         CONFIG: osx_arm64_occt7.7.2__all_python3.10.____cpython
@@ -62,6 +86,9 @@ jobs:
   # TODO: Fast finish on azure pipelines?
   - script: |
       export CI=azure
+      export flow_run_id=azure_$(Build.BuildNumber).$(System.JobAttempt)
+      export remote_url=$(Build.Repository.Uri)
+      export sha=$(Build.SourceVersion)
       export OSX_FORCE_SDK_DOWNLOAD="1"
       export GIT_BRANCH=$BUILD_SOURCEBRANCHNAME
       export FEEDSTOCK_NAME=$(basename ${BUILD_REPOSITORY_NAME})
