@@ -80,6 +80,7 @@ jobs:
       osx_arm64_occt7.7.2__novtk_python3.9.____cpython:
         CONFIG: osx_arm64_occt7.7.2__novtk_python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
+    maxParallel: 20
   timeoutInMinutes: 360
 
   steps:
