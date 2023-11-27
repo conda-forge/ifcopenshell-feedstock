@@ -1,4 +1,4 @@
-{% set version = "v0.7.0a10" %}
+{% set version = "0.7.0.231127" %}
 
 # Bump 0
 
@@ -7,15 +7,14 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/{{ version }}.tar.gz
-    sha256: 953d8d1ff52d0eabc6764b509ebaef7188a8d908237a32636a9857584981078d
+  - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/v{{ version }}.tar.gz
+    sha256: 85bc511f307df125caca320c340809e3aae372dfd7edcc5b2a4fd7d3020ae81e
     patches:
       - patches/edit_conda_hdf5_packaging.patch  # [win]
-    
   - url: https://github.com/IfcOpenShell/files/archive/ed6b97983ff1324a0eaec0fd676ab58051cf3059.tar.gz
     folder: test/input
     sha256: 2bf8cabd6364fbb09b4e7351397beb631d47d9574ee89c98510066acec3a58ac
-    
+
   - url: https://github.com/opensourceBIM/python-mvdxml/archive/83c12fa494b9d6a5a370d8525dc1f76aa5c89d8d.tar.gz
     folder: src/ifcopenshell-python/ifcopenshell/mvd
     sha256: 3a332aae707967e609dcab44a118a88ec270c551e7222eb53fc8ba809e9e7a0d
@@ -33,8 +32,8 @@ source:
     sha256: 5364b6a2d49c37fe3d0669366ec07348378868d1f0d94674cd1af97229adc558
 
 build:
-  number: 2
-  skip: True  # [py2k]
+  number: 0
+  skip: true  # [py2k]
 
 requirements:
   build:
@@ -77,19 +76,19 @@ about:
   description: |
     IfcOpenShell
     ============
-    
+
     IfcOpenShell is an open source ([LGPL]) software library for working with Industry Foundation Classes ([IFC]). Complete
     parsing support is provided for [IFC2x3 TC1], [IFC4 Add2 TC1], IFC4x1, IFC4x3, and IFC4x3. Extensive geometric support
     is implemented for the IFC releases [IFC2x3 TC1] and [IFC4 Add2 TC1]. Extending with support for arbitrary IFC schemas
     is possible at compile-time when using C++ and at run-time when using Python.
-    
+
     In addition to a C++ and Python API, IfcOpenShell comes with an ecosystem of tools, notably including IfcConvert (an
     application to convert IFC models to
     other formats), the BlenderBIM Add-on (an add-on to Blender providing a graphical IFC authoring platform), and many
     other libraries, CLI apps, and more. Support is also provided for auxiliary standards such as BCF and IDS.
-    
+
     For more information, see:
-    
+
     * [IfcOpenShell Website](http://ifcopenshell.org)
     * [IfcOpenShell Documentation](http://blenderbim.org/docs-python)
     * [IfcOpenShell C++ Installation](https://blenderbim.org/docs-python/ifcopenshell/installation.html)
@@ -99,7 +98,7 @@ about:
     * [BlenderBIM Add-on Documentation](http://blenderbim.org/docs)
     * [Add-on Installation](https://blenderbim.org/docs/users/installation.html)
     * [Exploring an IFC model](https://blenderbim.org/docs/users/exploring_an_ifc_model.html)
-    
+
     <table>
       <thead>
         <tr>
@@ -140,12 +139,12 @@ about:
           <td>Docker hub</td>
           <td><a href="https://hub.docker.com/r/aecgeeks/ifcopenshell"><img src="https://img.shields.io/docker/pulls/aecgeeks/ifcopenshell" alt="Docker Pulls"></a></td>
         </tr>
-    
+
       </tbody>
     </table>
     Contents
     --------
-    
+
     Those marked with an asterisk are part of IfcOpenShell.
     <table>
       <thead>
@@ -298,7 +297,7 @@ about:
     </tr>
     </tbody>
     </table>
-    
+
     [LGPL]: https://github.com/IfcOpenShell/IfcOpenShell/tree/master/COPYING.LESSER "LGPL-3.0-or-later"
     [IFC]: https://technical.buildingsmart.org/standards/ifc/ "IFC"
     [IFC2x3 TC1]: https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ "IFC2x3 TC1"
