@@ -8,29 +8,29 @@ jobs:
     vmImage: windows-2022
   strategy:
     matrix:
-      win_64_occt7.7.2__all_python3.10.____cpython:
-        CONFIG: win_64_occt7.7.2__all_python3.10.____cpython
+      win_64_python3.10.____cpythonvariantall:
+        CONFIG: win_64_python3.10.____cpythonvariantall
         UPLOAD_PACKAGES: 'True'
-      win_64_occt7.7.2__all_python3.11.____cpython:
-        CONFIG: win_64_occt7.7.2__all_python3.11.____cpython
+      win_64_python3.10.____cpythonvariantnovtk:
+        CONFIG: win_64_python3.10.____cpythonvariantnovtk
         UPLOAD_PACKAGES: 'True'
-      win_64_occt7.7.2__all_python3.8.____cpython:
-        CONFIG: win_64_occt7.7.2__all_python3.8.____cpython
+      win_64_python3.11.____cpythonvariantall:
+        CONFIG: win_64_python3.11.____cpythonvariantall
         UPLOAD_PACKAGES: 'True'
-      win_64_occt7.7.2__all_python3.9.____cpython:
-        CONFIG: win_64_occt7.7.2__all_python3.9.____cpython
+      win_64_python3.11.____cpythonvariantnovtk:
+        CONFIG: win_64_python3.11.____cpythonvariantnovtk
         UPLOAD_PACKAGES: 'True'
-      win_64_occt7.7.2__novtk_python3.10.____cpython:
-        CONFIG: win_64_occt7.7.2__novtk_python3.10.____cpython
+      win_64_python3.8.____cpythonvariantall:
+        CONFIG: win_64_python3.8.____cpythonvariantall
         UPLOAD_PACKAGES: 'True'
-      win_64_occt7.7.2__novtk_python3.11.____cpython:
-        CONFIG: win_64_occt7.7.2__novtk_python3.11.____cpython
+      win_64_python3.8.____cpythonvariantnovtk:
+        CONFIG: win_64_python3.8.____cpythonvariantnovtk
         UPLOAD_PACKAGES: 'True'
-      win_64_occt7.7.2__novtk_python3.8.____cpython:
-        CONFIG: win_64_occt7.7.2__novtk_python3.8.____cpython
+      win_64_python3.9.____cpythonvariantall:
+        CONFIG: win_64_python3.9.____cpythonvariantall
         UPLOAD_PACKAGES: 'True'
-      win_64_occt7.7.2__novtk_python3.9.____cpython:
-        CONFIG: win_64_occt7.7.2__novtk_python3.9.____cpython
+      win_64_python3.9.____cpythonvariantnovtk:
+        CONFIG: win_64_python3.9.____cpythonvariantnovtk
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables:
@@ -63,6 +63,9 @@ jobs:
         PYTHONUNBUFFERED: 1
         CONFIG: $(CONFIG)
         CI: azure
+        flow_run_id: azure_$(Build.BuildNumber).$(System.JobAttempt)
+        remote_url: $(Build.Repository.Uri)
+        sha: $(Build.SourceVersion)
         UPLOAD_PACKAGES: $(UPLOAD_PACKAGES)
         UPLOAD_TEMP: $(UPLOAD_TEMP)
         BINSTAR_TOKEN: $(BINSTAR_TOKEN)
