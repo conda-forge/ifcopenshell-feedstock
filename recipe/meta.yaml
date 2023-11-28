@@ -12,7 +12,9 @@ package:
 source:
   - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/{{ version }}.tar.gz
     sha256: 85bc511f307df125caca320c340809e3aae372dfd7edcc5b2a4fd7d3020ae81e
-    
+    patches:
+      - patches/ifcwrap_pythoninterpreter_remove_distutil.patch
+
   - url: https://github.com/IfcOpenShell/files/archive/ed6b97983ff1324a0eaec0fd676ab58051cf3059.tar.gz
     folder: test/input
     sha256: 2bf8cabd6364fbb09b4e7351397beb631d47d9574ee89c98510066acec3a58ac
