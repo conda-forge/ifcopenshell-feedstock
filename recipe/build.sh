@@ -33,4 +33,4 @@ cmake -G "Ninja" \
  -D HDF5_LIBRARY_DIR:FILEPATH="$PREFIX/lib" \
  ../cmake
 
-ninja install
+ninja install -j$CPU_COUNT
