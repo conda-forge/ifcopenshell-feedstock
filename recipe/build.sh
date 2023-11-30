@@ -9,7 +9,7 @@ else
 fi
 
 cmake -G "Ninja" \
- -D SCHEMA_VERSIONS="2x3;4;4x1;4x3;4x3_add1" \
+ -D SCHEMA_VERSIONS="2x3;4;4x1;4x3_add2" \
  -D CMAKE_BUILD_TYPE:STRING=Release \
  -D CMAKE_INSTALL_PREFIX:FILEPATH=$PREFIX \
  -D CMAKE_PREFIX_PATH:FILEPATH=$PREFIX \
@@ -33,4 +33,4 @@ cmake -G "Ninja" \
  -D HDF5_LIBRARY_DIR:FILEPATH="$PREFIX/lib" \
  ../cmake
 
-ninja install
+ninja install -j$CPU_COUNT
