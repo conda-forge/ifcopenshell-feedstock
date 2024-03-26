@@ -1,5 +1,5 @@
 {% set version = "v0.7.0.231127" %}
-{% set build = 2 %}
+{% set build = 3 %}
 
 # Higher number -> Always prioritize "all" variant over "novtk" variant
 {% set build = build + 100 %}   # [variant == "novtk"]
@@ -47,6 +47,7 @@ requirements:
     - ninja
     - swig 4.*
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - python
