@@ -9,9 +9,9 @@ cxx_compiler:
 hdf5:
 - 1.14.3
 libboost_devel:
-- '1.82'
+- '1.84'
 libxml2:
-- '2.11'
+- '2'
 mpfr:
 - '4'
 pin_run_as_build:
@@ -25,4 +25,4 @@ target_platform:
 variant:
 - novtk
 zlib:
-- '1.2'
+- '1'
