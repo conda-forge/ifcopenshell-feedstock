@@ -66,7 +66,8 @@ requirements:
     - zlib
   run:
     - python
-    - {{ pin_compatible('cgal-cpp', max_pin='x.x.x') }}
+    - {{ pin_compatible('occt', max_pin='x.x.x') }} *{{ variant }}*
+    - {{ pin_compatible('cgal-cpp', max_pin='x.x') }}
 
 
 test:
