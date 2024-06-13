@@ -38,6 +38,7 @@ source:
 
 build:
   number: {{ build }}
+  skip: true  # [py<39]
   string: py{{ CONDA_PY }}_{{ variant }}_h{{ PKG_HASH }}_{{ build }}
   run_exports:
     - {{ pin_subpackage('ifcopenshell', max_pin='x.x.x') }} *{{ variant }}*
