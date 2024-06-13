@@ -26,12 +26,6 @@ jobs:
       osx_64_python3.12.____cpythonvariantnovtk:
         CONFIG: osx_64_python3.12.____cpythonvariantnovtk
         UPLOAD_PACKAGES: 'True'
-      osx_64_python3.8.____cpythonvariantall:
-        CONFIG: osx_64_python3.8.____cpythonvariantall
-        UPLOAD_PACKAGES: 'True'
-      osx_64_python3.8.____cpythonvariantnovtk:
-        CONFIG: osx_64_python3.8.____cpythonvariantnovtk
-        UPLOAD_PACKAGES: 'True'
       osx_64_python3.9.____cpythonvariantall:
         CONFIG: osx_64_python3.9.____cpythonvariantall
         UPLOAD_PACKAGES: 'True'
@@ -55,12 +49,6 @@ jobs:
         UPLOAD_PACKAGES: 'True'
       osx_arm64_python3.12.____cpythonvariantnovtk:
         CONFIG: osx_arm64_python3.12.____cpythonvariantnovtk
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_python3.8.____cpythonvariantall:
-        CONFIG: osx_arm64_python3.8.____cpythonvariantall
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_python3.8.____cpythonvariantnovtk:
-        CONFIG: osx_arm64_python3.8.____cpythonvariantnovtk
         UPLOAD_PACKAGES: 'True'
       osx_arm64_python3.9.____cpythonvariantall:
         CONFIG: osx_arm64_python3.9.____cpythonvariantall
