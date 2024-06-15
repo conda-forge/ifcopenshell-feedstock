@@ -49,6 +49,7 @@ requirements:
     - cmake
     - ninja
     - swig >=4.1.1
+    - {{ stdlib("c") }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
