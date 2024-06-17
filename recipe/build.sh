@@ -11,7 +11,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 fi
 
 
-cmake -G Ninja \
+cmake ${CMAKE_ARGS} -G Ninja \
  -DSCHEMA_VERSIONS="2x3;4;4x1;4x3_add2" \
  -DCMAKE_BUILD_TYPE=Release \
  -DCMAKE_INSTALL_PREFIX=$PREFIX \
