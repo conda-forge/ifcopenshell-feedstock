@@ -13,3 +13,6 @@ remote_ci_setup:
 - conda-forge-ci-setup=3
 - py-lief>=0.12.3
 test: native_and_emulated
+azure:
+    settings_linux:
+        swapfile_size: 10GiB

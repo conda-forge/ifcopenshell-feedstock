@@ -32,14 +32,6 @@ jobs:
         CONFIG: linux_64_python3.12.____cpythonvariantnovtk
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_python3.8.____cpythonvariantall:
-        CONFIG: linux_64_python3.8.____cpythonvariantall
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_python3.8.____cpythonvariantnovtk:
-        CONFIG: linux_64_python3.8.____cpythonvariantnovtk
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_python3.9.____cpythonvariantall:
         CONFIG: linux_64_python3.9.____cpythonvariantall
         UPLOAD_PACKAGES: 'True'
@@ -72,14 +64,6 @@ jobs:
         CONFIG: linux_aarch64_python3.12.____cpythonvariantnovtk
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_python3.8.____cpythonvariantall:
-        CONFIG: linux_aarch64_python3.8.____cpythonvariantall
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_python3.8.____cpythonvariantnovtk:
-        CONFIG: linux_aarch64_python3.8.____cpythonvariantnovtk
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_aarch64_python3.9.____cpythonvariantall:
         CONFIG: linux_aarch64_python3.9.____cpythonvariantall
         UPLOAD_PACKAGES: 'True'
@@ -89,8 +73,15 @@ jobs:
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
   timeoutInMinutes: 360
+  variables: {}
 
   steps:
+  - script: |
+         sudo fallocate -l 10GiB /swapfile || true
+         sudo chmod 600 /swapfile || true
+         sudo mkswap /swapfile || true
+         sudo swapon /swapfile || true
+    displayName: Create swap file
   # configure qemu binfmt-misc running.  This allows us to run docker containers
   # embedded qemu-static
   - script: |
