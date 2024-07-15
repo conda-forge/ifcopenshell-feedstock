@@ -12,8 +12,6 @@ package:
 source:
   - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/ifcopenshell-python-{{ version }}.tar.gz
     sha256: 01661240b4f1dfcb46a78a9541f20e4b98afe8a07f0ac8e8ac8ddd8e98cfd6a8
-    patches:
-      - patches/find_hdf5_fix.patch  # [not osx]
 
   - url: https://github.com/IfcOpenShell/files/archive/ed6b97983ff1324a0eaec0fd676ab58051cf3059.tar.gz
     folder: test/input
