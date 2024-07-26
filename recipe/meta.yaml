@@ -1,4 +1,4 @@
-{% set version = "0.7.10" %}
+{% set version = "0.7.11" %}
 {% set build = 0 %}
 
 # Higher number -> Always prioritize "novtk" variant over "all" variant
@@ -11,7 +11,7 @@ package:
 
 source:
   - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/ifcopenshell-python-{{ version }}.tar.gz
-    sha256: 01661240b4f1dfcb46a78a9541f20e4b98afe8a07f0ac8e8ac8ddd8e98cfd6a8
+    sha256: c60c38e785a89440d4476c03552dc479a2f51e3fd23054ce1fcc9d8c5509c62c
 
   - url: https://github.com/IfcOpenShell/files/archive/ed6b97983ff1324a0eaec0fd676ab58051cf3059.tar.gz
     folder: test/input
