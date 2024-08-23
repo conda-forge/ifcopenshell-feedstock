@@ -5,7 +5,7 @@ MACOSX_SDK_VERSION:
 c_compiler:
 - clang
 c_compiler_version:
-- '16'
+- '17'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -17,13 +17,13 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '16'
+- '17'
 gmp:
 - '6'
 hdf5:
 - 1.14.3
 libboost_devel:
-- '1.84'
+- '1.86'
 libxml2:
 - '2'
 macos_machine:
