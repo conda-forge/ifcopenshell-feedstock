@@ -85,8 +85,9 @@ test:
     - lark
     - networkx
     - tabulate
+    - shapely
   commands:
-    - pytest src/ifcopenshell-python/test --ignore=*test_shape_builder.py --ignore=*test_selector.py
+    - pytest src/ifcopenshell-python/test --ignore=src/ifcopenshell-python/test/util/test_shape_builder.py
 
 
 about:
