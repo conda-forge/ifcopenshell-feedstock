@@ -70,10 +70,11 @@ requirements:
 test:
   source_files:
     - src/ifcopenshell-python/test/Sample-BIM-Files
+    - src/ifcopenshell-python/test
   imports:
     - ifcopenshell
   requires:
-    - occt * *novtk*  # Ensure that even though compiled against OCCT with VTK, it can still run without VTK
+    - occt * *novtk*  # Ensure that even though compiled against OCCT with VTK, it can still run with OCCT without VTK
     - pytest
   commands:
     - pytest src/ifcopenshell-python/test
