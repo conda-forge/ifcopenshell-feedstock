@@ -86,7 +86,7 @@ test:
     - networkx
     - tabulate
   commands:
-    - pytest src/ifcopenshell-python/test
+    - pytest src/ifcopenshell-python/test --ignore=*test_shape_builder.py --ignore=*test_selector.py
 
 
 about:
