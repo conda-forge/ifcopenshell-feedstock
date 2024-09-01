@@ -77,6 +77,14 @@ test:
   requires:
     - occt * *novtk*  # Ensure that even though compiled against OCCT with VTK, it can still run with OCCT without VTK
     - pytest
+    - python-dateutil
+    - xmlschema
+    - xsdata
+    - lxml
+    - isodate
+    - lark
+    - networkx
+    - tabulate
   commands:
     - pytest src/ifcopenshell-python/test
 
