@@ -16,15 +16,15 @@ libxml2:
 - '2'
 mpfr:
 - '4'
+occt:
+- 7.7.2
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.12.* *_cpython
+- 3.10.* *_cpython
 target_platform:
 - win-64
-variant:
-- all
 zlib:
 - '1'

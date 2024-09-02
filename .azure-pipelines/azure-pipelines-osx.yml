@@ -8,53 +8,29 @@ jobs:
     vmImage: macOS-12
   strategy:
     matrix:
-      osx_64_python3.10.____cpythonvariantall:
-        CONFIG: osx_64_python3.10.____cpythonvariantall
+      osx_64_python3.10.____cpython:
+        CONFIG: osx_64_python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_python3.10.____cpythonvariantnovtk:
-        CONFIG: osx_64_python3.10.____cpythonvariantnovtk
+      osx_64_python3.11.____cpython:
+        CONFIG: osx_64_python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_python3.11.____cpythonvariantall:
-        CONFIG: osx_64_python3.11.____cpythonvariantall
+      osx_64_python3.12.____cpython:
+        CONFIG: osx_64_python3.12.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_python3.11.____cpythonvariantnovtk:
-        CONFIG: osx_64_python3.11.____cpythonvariantnovtk
+      osx_64_python3.9.____cpython:
+        CONFIG: osx_64_python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_python3.12.____cpythonvariantall:
-        CONFIG: osx_64_python3.12.____cpythonvariantall
+      osx_arm64_python3.10.____cpython:
+        CONFIG: osx_arm64_python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_python3.12.____cpythonvariantnovtk:
-        CONFIG: osx_64_python3.12.____cpythonvariantnovtk
+      osx_arm64_python3.11.____cpython:
+        CONFIG: osx_arm64_python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_python3.9.____cpythonvariantall:
-        CONFIG: osx_64_python3.9.____cpythonvariantall
+      osx_arm64_python3.12.____cpython:
+        CONFIG: osx_arm64_python3.12.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_64_python3.9.____cpythonvariantnovtk:
-        CONFIG: osx_64_python3.9.____cpythonvariantnovtk
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_python3.10.____cpythonvariantall:
-        CONFIG: osx_arm64_python3.10.____cpythonvariantall
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_python3.10.____cpythonvariantnovtk:
-        CONFIG: osx_arm64_python3.10.____cpythonvariantnovtk
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_python3.11.____cpythonvariantall:
-        CONFIG: osx_arm64_python3.11.____cpythonvariantall
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_python3.11.____cpythonvariantnovtk:
-        CONFIG: osx_arm64_python3.11.____cpythonvariantnovtk
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_python3.12.____cpythonvariantall:
-        CONFIG: osx_arm64_python3.12.____cpythonvariantall
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_python3.12.____cpythonvariantnovtk:
-        CONFIG: osx_arm64_python3.12.____cpythonvariantnovtk
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_python3.9.____cpythonvariantall:
-        CONFIG: osx_arm64_python3.9.____cpythonvariantall
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_python3.9.____cpythonvariantnovtk:
-        CONFIG: osx_arm64_python3.9.____cpythonvariantnovtk
+      osx_arm64_python3.9.____cpython:
+        CONFIG: osx_arm64_python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables: {}
