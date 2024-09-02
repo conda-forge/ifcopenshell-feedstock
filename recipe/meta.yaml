@@ -8,6 +8,8 @@ package:
 source:
   - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/ifcopenshell-python-{{ version }}.tar.gz
     sha256: 9666e945be059654ef4f29edb8920364c00a191f3123dc3d48ab89409b9e3582
+    patches:
+      - patches/fix_boost_mt19937_issue.patch
 
   - url: https://github.com/IfcOpenShell/files/archive/ed6b97983ff1324a0eaec0fd676ab58051cf3059.tar.gz
     folder: test/input

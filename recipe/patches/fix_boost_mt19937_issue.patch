@@ -1,0 +1,23 @@
+Subject: [PATCH] fix boost mt19937 issue
+---
+Index: src/ifcparse/IfcGlobalId.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ifcparse/IfcGlobalId.cpp b/src/ifcparse/IfcGlobalId.cpp
+--- a/src/ifcparse/IfcGlobalId.cpp	(revision c9ecf7fb8a314553d134ae9a2328b77357fd3f6f)
++++ b/src/ifcparse/IfcGlobalId.cpp	(date 1725296688322)
+@@ -88,12 +88,7 @@
+ }
+ 
+ // A random number generator for the UUID
+-// Define the macro to handle different Boost versions
+-#if BOOST_VERSION >= 108600
+-static boost::uuids::basic_random_generator<std::mt19937> gen;
+-#else
+ static boost::uuids::basic_random_generator<boost::mt19937> gen;
+-#endif
+ 
+ IfcParse::IfcGlobalId::IfcGlobalId() {
+     uuid_data_ = gen();
