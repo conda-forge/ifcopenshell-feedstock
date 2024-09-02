@@ -69,6 +69,8 @@ requirements:
 
 
 test:
+  files:
+    - pytest.ini
   source_files:
     - src/ifcopenshell-python/test/Sample-BIM-Files
     - src/ifcopenshell-python/test
@@ -87,8 +89,7 @@ test:
     - tabulate
     - shapely
   commands:
-    - pytest src/ifcopenshell-python/test --ignore=src/ifcopenshell-python/test/util/test_shape_builder.py --ignore=src/ifcopenshell-python/test/test_write.py --ignore=src/ifcopenshell-python/test/test_open.py
-
+    - pytest src/ifcopenshell-python/test
 
 about:
   home: https://ifcopenshell.org
