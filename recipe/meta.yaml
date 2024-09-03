@@ -61,7 +61,7 @@ requirements:
     - mpfr
     - nlohmann_json
     - gmp  # [unix]
-    - mpir  # [win]
+    - gmp  # [win]
     - zlib
   run:
     - python
