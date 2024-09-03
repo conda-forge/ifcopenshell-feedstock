@@ -1,0 +1,25 @@
+Subject: [PATCH] fix IfcLogger missing newlines in boost 1.86
+---
+Index: src/ifcparse/IfcLogger.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ifcparse/IfcLogger.cpp b/src/ifcparse/IfcLogger.cpp
+--- a/src/ifcparse/IfcLogger.cpp	(revision e072870fd38139a8fb9050fc21727fad580e459c)
++++ b/src/ifcparse/IfcLogger.cpp	(date 1725349526474)
+@@ -113,7 +113,14 @@
+ 
+     property_tree.put(time_string, string_as<typename T::char_type>(get_time()));
+ 
++    // Write the JSON to the output stream
+     boost::property_tree::write_json(out, property_tree, false);
++
++    // Append a newline after the JSON object if the Boost version is 1.86 or higher
++#if BOOST_VERSION >= 108600
++    out << std::endl;
++#endif
++
+ }
+ } // namespace
+ 
