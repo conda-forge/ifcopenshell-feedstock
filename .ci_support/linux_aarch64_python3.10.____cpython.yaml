@@ -27,7 +27,7 @@ gmp:
 hdf5:
 - 1.14.3
 libboost_devel:
-- '1.84'
+- '1.86'
 libxml2:
 - '2'
 mpfr:
