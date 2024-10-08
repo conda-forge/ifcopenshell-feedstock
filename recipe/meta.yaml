@@ -99,7 +99,8 @@ outputs:
 
   - name: bcf-client
     build:
-        noarch: python
+      noarch: python
+      skip: true  # [build_platform != target_platform]
     script: bld_bcf.bat  # [win]
     script: build_bcf.sh  # [not win]
     requirements:
