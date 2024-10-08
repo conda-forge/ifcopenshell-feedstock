@@ -101,6 +101,7 @@ outputs:
     build:
       noarch: python
       skip: true  # [build_platform != target_platform]
+      skip: true  # [py<310]
     script: bld_bcf.bat  # [win]
     script: build_bcf.sh  # [not win]
     requirements:
