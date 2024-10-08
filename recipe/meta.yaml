@@ -44,8 +44,8 @@ outputs:
       binary_relocation: false  # [osx]
       run_exports:
         - {{ pin_subpackage('ifcopenshell', max_pin='x.x.x') }}
-    script: bld_ifcopenshell.bat # [win]
-    script: build_ifcopenshell.sh # [not win]
+    script: bld_ifcopenshell.bat  # [win]
+    script: build_ifcopenshell.sh  # [not win]
     requirements:
       build:
         - python                                 # [build_platform != target_platform]
@@ -100,11 +100,12 @@ outputs:
   - name: bcf-client
     build:
         noarch: python
-    script: bld_bcf.bat # [win]
-    script: build_bcf.sh # [not win]
+    script: bld_bcf.bat  # [win]
+    script: build_bcf.sh  # [not win]
     requirements:
       host:
         - python
+        - setuptools
         - pip
       run:
         - python
@@ -116,6 +117,7 @@ outputs:
             - bcf
         requires:
             - pytest
+            - ifcopenshell
         source_files:
             - src/bcf/tests
         commands:
