@@ -2,7 +2,7 @@
 {% set build = 4 %}
 
 package:
-  name: ifcopenshell
+  name: ifcopenshell-packages
   version: {{ version }}
 
 source:
@@ -11,6 +11,7 @@ source:
     patches:
       - patches/fix_boost_mt19937_issue.patch
       - patches/fix_IfcLogger_missing_newlines_in_boost_1_86.patch
+      - patches/cgal_6_aab_traits_removal_ifdef.patch
 
   - url: https://github.com/IfcOpenShell/files/archive/ed6b97983ff1324a0eaec0fd676ab58051cf3059.tar.gz
     folder: test/input
@@ -35,64 +36,90 @@ source:
 
 build:
   number: {{ build }}
-  skip: true  # [py<39]
-  binary_relocation: false  # [osx]
-  run_exports:
-    - {{ pin_subpackage('ifcopenshell', max_pin='x.x.x') }}
 
+outputs:
+  - name: ifcopenshell
+    build:
+      skip: true  # [py<39]
+      binary_relocation: false  # [osx]
+      run_exports:
+        - {{ pin_subpackage('ifcopenshell', max_pin='x.x.x') }}
+    script: bld_ifcopenshell.bat # [win]
+    script: build_ifcopenshell.sh # [not win]
+    requirements:
+      build:
+        - python                                 # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+        - cmake
+        - ninja
+        - swig >=4.1.1
+        - {{ stdlib("c") }}
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+      host:
+        - python
+        - libboost-devel
+        - occt
+        - libxml2
+        - cgal-cpp
+        - hdf5
+        - eigen
+        - mpfr
+        - nlohmann_json
+        - gmp  # [unix]
+        - gmp  # [win]
+        - zlib
+      run:
+        - python
+        - numpy
+        - {{ pin_compatible('occt', max_pin='x.x.x') }}
+        - {{ pin_compatible('cgal-cpp', max_pin='x.x') }}
+    test:
+      files:
+        - pytest.ini
+      source_files:
+        - src/ifcopenshell-python/test/Sample-BIM-Files
+        - src/ifcopenshell-python/test
+      imports:
+        - ifcopenshell
+      requires:
+        - occt * *novtk*  # Ensure that even though compiled against OCCT with VTK, it can still run with OCCT without VTK
+        - pytest
+        - python-dateutil
+        - xmlschema
+        - xsdata
+        - lxml
+        - isodate
+        - lark
+        - networkx
+        - tabulate
+        - shapely
+      commands:
+        - pytest src/ifcopenshell-python/test
 
-requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cmake
-    - ninja
-    - swig >=4.1.1
-    - {{ stdlib("c") }}
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-  host:
-    - python
-    - libboost-devel
-    - occt
-    - libxml2
-    - cgal-cpp
-    - hdf5
-    - eigen
-    - mpfr
-    - nlohmann_json
-    - gmp  # [unix]
-    - gmp  # [win]
-    - zlib
-  run:
-    - python
-    - numpy
-    - {{ pin_compatible('occt', max_pin='x.x.x') }}
-    - {{ pin_compatible('cgal-cpp', max_pin='x.x') }}
-
-
-test:
-  files:
-    - pytest.ini
-  source_files:
-    - src/ifcopenshell-python/test/Sample-BIM-Files
-    - src/ifcopenshell-python/test
-  imports:
-    - ifcopenshell
-  requires:
-    - occt * *novtk*  # Ensure that even though compiled against OCCT with VTK, it can still run with OCCT without VTK
-    - pytest
-    - python-dateutil
-    - xmlschema
-    - xsdata
-    - lxml
-    - isodate
-    - lark
-    - networkx
-    - tabulate
-    - shapely
-  commands:
-    - pytest src/ifcopenshell-python/test
+  - name: bcf-client
+    build:
+        noarch: python
+    script: bld_bcf.bat # [win]
+    script: build_bcf.sh # [not win]
+    requirements:
+      host:
+        - python
+        - pip
+      run:
+        - python
+        - requests
+        - numpy
+        - xsdata
+    test:
+        imports:
+            - bcf
+        requires:
+            - pytest
+        source_files:
+            - src/bcf/tests
+        commands:
+            - pytest src/bcf/tests
 
 about:
   home: https://ifcopenshell.org
