@@ -21,7 +21,6 @@ docker_image:
 gmp:
 - '6'
 hdf5:
-- 1.14.3
 - 1.14.4
 libboost_devel:
 - '1.86'
@@ -36,9 +35,9 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.11.* *_cpython
+- 3.12.* *_cpython
 target_platform:
-- linux-64
+- linux-aarch64
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version

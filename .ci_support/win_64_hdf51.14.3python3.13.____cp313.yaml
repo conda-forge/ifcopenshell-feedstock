@@ -11,7 +11,7 @@ cxx_compiler:
 gmp:
 - '6'
 hdf5:
-- 1.14.4
+- 1.14.3
 libboost_devel:
 - '1.86'
 libxml2:
@@ -19,17 +19,14 @@ libxml2:
 mpfr:
 - '4'
 occt:
-- 7.7.2
+- 7.8.1
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.12.* *_cpython
+- 3.13.* *_cp313
 target_platform:
 - win-64
-zip_keys:
-- - python
-  - channel_sources
 zlib:
 - '1'
