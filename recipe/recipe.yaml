@@ -113,7 +113,9 @@ outputs:
       version: ${{ version }}
     build:
       noarch: python
-      skip: match(python, "<3.10")
+      skip:
+        - match(python, "<3.10")
+        - build_platform != target_platform
       script: pip install src/bcf -v --no-deps --ignore-installed
     requirements:
       host:
