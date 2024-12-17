@@ -68,6 +68,7 @@ jobs:
       osx_arm64_hdf51.14.4python3.9.____cpython:
         CONFIG: osx_arm64_hdf51.14.4python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
+    maxParallel: 11
   timeoutInMinutes: 360
   variables: {}
 
