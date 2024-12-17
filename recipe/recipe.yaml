@@ -47,7 +47,7 @@ outputs:
       script:
         - if: win
           then: bld_ifcopenshell.bat
-          else: bld_ifcopenshell.sh
+          else: build_ifcopenshell.sh
       dynamic_linking:
         binary_relocation: ${{ true if osx }}
     requirements:
