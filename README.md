@@ -1,9 +1,9 @@
-About ifcopenshell-packages-feedstock
-=====================================
+About ifcopenshell-feedstock
+============================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ifcopenshell-feedstock/blob/main/LICENSE.txt)
 
-Home: https://ifcopenshell.org
+Home: https://ifcopenshell.org/
 
 Package license: LGPL-3.0-or-later
 
@@ -16,224 +16,236 @@ Documentation: https://ifcopenshell.org/
 IfcOpenShell
 ============
 
-<p align="center">
-<img src="https://github.com/IfcOpenShell/IfcOpenShell/assets/88302/34901387-e2dd-4a0c-8e38-9ffc32a66cde">
-</p>
-
 IfcOpenShell is an open source ([LGPL]) software library for working with Industry Foundation Classes ([IFC]). Complete
-parsing support is provided for [IFC2x3 TC1], [IFC4 Add2 TC1], IFC4x1, IFC4x2, and [IFC4x3 Add2]. Extensive geometric support
+parsing support is provided for [IFC2x3 TC1], [IFC4 Add2 TC1], IFC4x1, IFC4x3, and IFC4x3. Extensive geometric support
 is implemented for the IFC releases [IFC2x3 TC1] and [IFC4 Add2 TC1]. Extending with support for arbitrary IFC schemas
 is possible at compile-time when using C++ and at run-time when using Python.
 
-In addition to a C++ and Python API, IfcOpenShell comes with an ecosystem of tools, notably including IfcConvert (an application
-to convert IFC models to other formats), Bonsai (an add-on to Blender providing a graphical IFC authoring platform),
-and many other libraries, CLI apps, and more. Support is also provided for auxiliary standards such as BCF and IDS.
+In addition to a C++ and Python API, IfcOpenShell comes with an ecosystem of tools, notably including IfcConvert (an
+application to convert IFC models to
+other formats), the BlenderBIM Add-on (an add-on to Blender providing a graphical IFC authoring platform), and many
+other libraries, CLI apps, and more. Support is also provided for auxiliary standards such as BCF and IDS.
 
 For more information, see:
 
 * [IfcOpenShell Website](http://ifcopenshell.org)
-* [IfcOpenShell Documentation](https://docs.ifcopenshell.org)
-  * [IfcOpenShell C++ Installation](https://docs.ifcopenshell.org/ifcopenshell/installation.html)
-  * [IfcOpenShell Python Installation](https://docs.ifcopenshell.org/ifcopenshell-python/installation.html)
-  * [IfcOpenShell Python Hello World Tutorial](https://docs.ifcopenshell.org/ifcopenshell-python/hello_world.html)
+* [IfcOpenShell Documentation](http://bonsaibim.org/docs-python)
+* [IfcOpenShell C++ Installation](https://bonsaibim.org/docs-python/ifcopenshell/installation.html)
+* [IfcOpenShell Python Installation](https://bonsaibim.org/docs-python/ifcopenshell-python/installation.html)
+* [IfcOpenShell Python Hello World Tutorial](https://bonsaibim.org/docs-python/ifcopenshell-python/hello_world.html)
 * [Bonsai Website](https://bonsaibim.org)
-* [Bonsai Documentation](https://docs.bonsaibim.org/index.html)
-  * [Add-on Installation](https://docs.bonsaibim.org/quickstart/installation.html)
-  * [Exploring an IFC model](https://docs.bonsaibim.org/quickstart/explore_model.html)
+* [Bonsai Documentation](http://bonsaibim.org/docs)
+* [Add-on Installation](https://bonsaibim.org/docs/users/installation.html)
+* [Exploring an IFC model](https://bonsaibim.org/docs/users/exploring_an_ifc_model.html)
 
-Development is sponsored through your generous donations!
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anaconda Daily Build</td>
+<td><a href="https://anaconda.org/ifcopenshell/ifcopenshell"><img src="https://img.shields.io/conda/vn/ifcopenshell/ifcopenshell" alt="Anaconda-Server Badge"></a></td>
+</tr>
+<tr>
+<td>Anaconda v0.8.0 Stable</td>
+<td><a href="https://anaconda.org/conda-forge/ifcopenshell"><img src="https://img.shields.io/conda/vn/conda-forge/ifcopenshell" alt="Anaconda-Server Badge"></a></td>
+</tr>
+<tr>
+<td>PyPi Daily Build</td>
+<td><a href="https://pypi.org/project/ifcopenshell/"><img src="https://img.shields.io/pypi/v/ifcopenshell" alt="PyPi Badge"></a></td>
+</tr>
+<tr>
+<td>ArchLinux AUR Package Stable</td>
+<td><a href="https://aur.archlinux.org/packages/ifcopenshell"><img src="https://img.shields.io/aur/version/ifcopenshell" alt="AUR Badge"></a></td>
+</tr>
+<tr>
+<td>ArchLinux AUR Package git</td>
+<td><a href="https://aur.archlinux.org/packages/ifcopenshell-git"><img src="https://img.shields.io/aur/version/ifcopenshell-git" alt="AUR Badge"></a></td>
+</tr>
+<tr>
+<td>BlenderBIM Add-on Chocolatey (under moderation)</td>
+<td><a href="https://community.chocolatey.org/packages/blenderbim-nightly/"><img src="https://img.shields.io/chocolatey/v/blenderbim-nightly" alt="Chocolatey Badge"></a></td>
+</tr>
+<tr>
+<td>Sponsor development on OpenCollective</td>
+<td><a href="https://opencollective.com/opensourcebim/"><img src="https://opencollective.com/opensourcebim/tiers/badge.svg" alt="Financial Contributors"></a></td>
+</tr>
+<tr>
+<td>Docker hub</td>
+<td><a href="https://hub.docker.com/r/aecgeeks/ifcopenshell"><img src="https://img.shields.io/docker/pulls/aecgeeks/ifcopenshell" alt="Docker Pulls"></a></td>
+</tr>
 
-[![Open Collective Contributors](https://img.shields.io/opencollective/all/opensourcebim?label=Sponsors&color=22ce5f)](https://opencollective.com/opensourcebim/)
-
+</tbody>
+</table>
 Contents
 --------
 
+Those marked with an asterisk are part of IfcOpenShell.
 <table>
-  <tr>
-      <td>Name</td>
-      <td>Description</td>
-      <td>License</td>
-      <td>Service</td>
-  </tr>
-  <tr>
-      <td>bcf</td>
-      <td>Library to read and write BCF-XML and query OpenCDE BCF-API modules</td>
-      <td>LGPL-3.0-or-later</td>
-      <td><a href="https://pypi.org/project/bcf-client/"><img src="https://img.shields.io/pypi/v/bcf-client?label=PyPI&amp;color=006dad" alt="PyPI"></a></td>
-  </tr>
-  <tr>
-      <td>bonsai</td>
-      <td>Add-on to Blender providing a graphical native IFC authoring platform</td>
-      <td>GPL-3.0-or-later</td>
-      <td><a href="https://bonsaibim.org/download.html"><img src="https://img.shields.io/badge/BonsaiBIM.org-Download-70ba35" alt="Official"></a> <a href="https://github.com/IfcOpenShell/IfcOpenShell/releases?q=bonsai&amp;expanded=true"><img src="https://img.shields.io/github/v/release/ifcopenshell/ifcopenshell?filter=bonsai-*&amp;label=GitHub-Unstable&amp;color=f6f8fa" alt="GitHub Unstable"></a> <a href="https://community.chocolatey.org/packages/blenderbim-nightly/"><img src="https://img.shields.io/chocolatey/v/blenderbim-nightly?label=Chocolatey&amp;color=5c9fd8" alt="Chocolatey"></a></td>
-  </tr>
-  <tr>
-      <td>bsdd</td>
-      <td>Library to query the bSDD API</td>
-      <td>LGPL-3.0-or-later</td>
-      <td><a href="https://pypi.org/project/bsdd/"><img src="https://img.shields.io/pypi/v/bsdd?label=PyPI&amp;color=006dad" alt="PyPI"></a></td>
-  </tr>
-  <tr>
-      <td>ifc2ca</td>
-      <td>Utility to convert IFC structural analysis models to Code_Aster</td>
-      <td>LGPL-3.0-or-later</td>
-      <td></td>
-  </tr>
-  <tr>
-      <td>ifc4d</td>
-      <td>Convert to and from IFC and project management software</td>
-      <td>LGPL-3.0-or-later</td>
-      <td><a href="https://pypi.org/project/ifc4d/"><img src="https://img.shields.io/pypi/v/ifc4d?label=PyPI&amp;color=006dad" alt="PyPI"></a></td>
-  </tr>
-  <tr>
-      <td>ifc5d</td>
-      <td>Report and optimise cost information from IFC</td>
-      <td>LGPL-3.0-or-later</td>
-      <td><a href="https://pypi.org/project/ifc5d/"><img src="https://img.shields.io/pypi/v/ifc5d?label=PyPI&amp;color=006dad" alt="PyPI"></a></td>
-  </tr>
-  <tr>
-      <td>ifcbimtester</td>
-      <td>Wrapper for Gherkin based unit testing for IFC models</td>
-      <td>LGPL-3.0-or-later</td>
-      <td></td>
-  </tr>
-  <tr>
-      <td>ifcblender</td>
-      <td>Historic Blender IFC import add-on</td>
-      <td>LGPL-3.0-or-later*</td>
-      <td></td>
-  </tr>
-  <tr>
-      <td>ifccityjson</td>
-      <td>Convert CityJSON to IFC</td>
-      <td>LGPL-3.0-or-later</td>
-      <td><a href="https://pypi.org/project/ifccityjson/"><img src="https://img.shields.io/pypi/v/ifccityjson?label=PyPI&amp;color=006dad" alt="PyPI"></a></td>
-  </tr>
-  <tr>
-      <td>ifcclash</td>
-      <td>Clash detection library and CLI app</td>
-      <td>LGPL-3.0-or-later</td>
-      <td><a href="https://pypi.org/project/ifcclash/"><img src="https://img.shields.io/pypi/v/ifcclash?label=PyPI&amp;color=006dad" alt="PyPI"></a></td>
-  </tr>
-  <tr>
-      <td>ifcconvert</td>
-      <td>CLI app to convert IFC to many other formats</td>
-      <td>LGPL-3.0-or-later*</td>
-      <td><a href="https://docs.ifcopenshell.org/ifcconvert/installation.html"><img src="https://img.shields.io/badge/IfcOpenShell.org-Download-70ba35" alt="Official"></a> <a href="https://github.com/IfcOpenShell/IfcOpenShell/releases?q=ifcconvert&amp;expanded=true"><img src="https://img.shields.io/github/v/release/ifcopenshell/ifcopenshell?filter=ifcconvert-*&amp;label=GitHub&amp;color=f6f8fa" alt="GitHub"></a></td>
-  </tr>
-  <tr>
-      <td>ifccsv</td>
-      <td>Library and CLI app to export and import schedules from IFC</td>
-      <td>LGPL-3.0-or-later</td>
-      <td><a href="https://pypi.org/project/ifccsv/"><img src="https://img.shields.io/pypi/v/ifccsv?label=PyPI&amp;color=006dad" alt="PyPI"></a></td>
-  </tr>
-  <tr>
-      <td>ifcdiff</td>
-      <td>Compare changes between IFC models</td>
-      <td>LGPL-3.0-or-later</td>
-      <td><a href="https://pypi.org/project/ifcdiff/"><img src="https://img.shields.io/pypi/v/ifcdiff?label=PyPI&amp;color=006dad" alt="PyPI"></a></td>
-  </tr>
-  <tr>
-      <td>ifcfm</td>
-      <td>Extract IFC data for FM handover requirements</td>
-      <td>LGPL-3.0-or-later</td>
-      <td><a href="https://pypi.org/project/ifcfm/"><img src="https://img.shields.io/pypi/v/ifcfm?label=PyPI&amp;color=006dad" alt="PyPI"></a></td>
-  </tr>
-  <tr>
-      <td>ifcmax</td>
-      <td>Historic extension for IFC support in 3DS Max</td>
-      <td>LGPL-3.0-or-later*</td>
-      <td><a href="https://docs.ifcopenshell.org/ifcmax.html"><img src="https://img.shields.io/badge/IfcOpenShell.org-Download-70ba35" alt="Official"></a></td>
-  </tr>
-  <tr>
-      <td>ifcopenshell-python</td>
-      <td>Python library for IFC manipulation</td>
-      <td>LGPL-3.0-or-later*</td>
-      <td><a href="https://docs.ifcopenshell.org/ifcopenshell-python/installation.html"><img src="https://img.shields.io/badge/IfcOpenShell.org-Download-70ba35" alt="Official"></a> <a href="https://github.com/IfcOpenShell/IfcOpenShell/releases?q=ifcopenshell-python&amp;expanded=true"><img src="https://img.shields.io/github/v/release/ifcopenshell/ifcopenshell?filter=ifcopenshell-python-*&amp;label=GitHub&amp;color=f6f8fa" alt="GitHub"></a> <a href="https://pypi.org/project/ifcopenshell/"><img src="https://img.shields.io/pypi/v/ifcopenshell?label=PyPI&amp;color=006dad" alt="PyPI"></a> <a href="https://anaconda.org/conda-forge/ifcopenshell"><img src="https://img.shields.io/conda/vn/conda-forge/ifcopenshell?label=Anaconda&amp;color=43b02a" alt="Anaconda"></a> <a href="https://anaconda.org/ifcopenshell/ifcopenshell"><img src="https://img.shields.io/conda/vn/ifcopenshell/ifcopenshell?label=Anaconda-Unstable&amp;color=43b02a" alt="Anaconda Unstable"></a> <a href="https://hub.docker.com/r/aecgeeks/ifcopenshell"><img src="https://img.shields.io/docker/pulls/aecgeeks/ifcopenshell?label=Docker&amp;color=1D63ED" alt="Docker"></a> <a href="https://aur.archlinux.org/packages/ifcopenshell"><img src="https://img.shields.io/aur/version/ifcopenshell?label=AUR&amp;color=1793d1" alt="AUR"></a> <a href="https://aur.archlinux.org/packages/ifcopenshell-git"><img src="https://img.shields.io/aur/version/ifcopenshell-git?label=AUR-Unstable&amp;color=1793d1" alt="AUR Unstable"></a></td>
-  </tr>
-  <tr>
-      <td>ifcpatch</td>
-      <td>Utility to run pre-packaged scripts to manipulate IFCs</td>
-      <td>LGPL-3.0-or-later</td>
-      <td><a href="https://pypi.org/project/ifcpatch/"><img src="https://img.shields.io/pypi/v/ifcpatch?label=PyPI&amp;color=006dad" alt="PyPI"></a></td>
-  </tr>
-  <tr>
-      <td>ifcsverchok</td>
-      <td>Blender Add-on for visual node programming with IFC</td>
-      <td>GPL-3.0-or-later</td>
-      <td><a href="https://github.com/IfcOpenShell/IfcOpenShell/releases?q=ifcsverchok&amp;expanded=true"><img src="https://img.shields.io/github/v/release/ifcopenshell/ifcopenshell?filter=ifcsverchok-*.*.*.*&amp;label=GitHub-Unstable&amp;color=f6f8fa" alt="GitHub Unstable"></a></td>
-  </tr>
-  <tr>
-      <td>ifctester</td>
-      <td>Library, CLI and webapp for IDS model auditing</td>
-      <td>LGPL-3.0-or-later</td>
-      <td><a href="https://pypi.org/project/ifctester/"><img src="https://img.shields.io/pypi/v/ifctester?label=PyPI&amp;color=006dad" alt="PyPI"></a></td>
-  </tr>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>License</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bcf</td>
+<td>Library to read and write BCF-XML and query OpenCDE BCF-API modules</td>
+<td>LGPL-3.0-or-later</td>
+</tr>
+<tr>
+<td>blenderbim</td>
+<td>Add-on to Blender providing a graphical native IFC authoring platform</td>
+<td>GPL-3.0-or-later</td>
+</tr>
+<tr>
+<td>bsdd</td>
+<td>Library to query the bSDD API</td>
+<td>LGPL-3.0-or-later</td>
+</tr>
+<tr>
+<td>ifc2ca</td>
+<td>Utility to convert IFC structural analysis models to Code_Aster</td>
+<td>LGPL-3.0-or-later</td>
+</tr>
+<tr>
+<td>ifc4d</td>
+<td>Convert to and from IFC and project management software</td>
+<td>LGPL-3.0-or-later</td>
+</tr>
+<tr>
+<td>ifc5d</td>
+<td>Report and optimise cost information from IFC</td>
+<td>LGPL-3.0-or-later</td>
+</tr>
+<tr>
+<td>ifcbimtester</td>
+<td>Wrapper for Gherkin based unit testing for IFC models</td>
+<td>LGPL-3.0-or-later</td>
+</tr>
+<tr>
+<td>ifcblender</td>
+<td>Historic Blender IFC import add-on</td>
+<td>LGPL-3.0-or-later*</td>
+</tr>
+<tr>
+<td>ifccityjson</td>
+<td>Convert CityJSON to IFC</td>
+<td>LGPL-3.0-or-later</td>
+</tr>
+<tr>
+<td>ifcclash</td>
+<td>Clash detection library and CLI app</td>
+<td>LGPL-3.0-or-later</td>
+</tr>
+<tr>
+<td>ifccobie</td>
+<td>Extract IFC data for COBie handover requirements</td>
+<td>LGPL-3.0-or-later</td>
+</tr>
+<tr>
+<td>ifcconvert</td>
+<td>CLI app to convert IFC to many other formats</td>
+<td>LGPL-3.0-or-later*</td>
+</tr>
+<tr>
+<td>ifccsv</td>
+<td>Library and CLI app to export and import schedules from IFC</td>
+<td>LGPL-3.0-or-later</td>
+</tr>
+<tr>
+<td>ifcdiff</td>
+<td>Compare changes between IFC models</td>
+<td>LGPL-3.0-or-later</td>
+</tr>
+<tr>
+<td>ifcfm</td>
+<td>Extract IFC data for FM handover requirements</td>
+<td>LGPL-3.0-or-later</td>
+</tr>
+<tr>
+<td>ifcgeom</td>
+<td>Internal library for IfcOpenShell</td>
+<td>LGPL-3.0-or-later*</td>
+</tr>
+<tr>
+<td>ifcgeom_schema_agnostic</td>
+<td>Internal library for IfcOpenShell</td>
+<td>LGPL-3.0-or-later*</td>
+</tr>
+<tr>
+<td>ifcgeomserver</td>
+<td>Internal library for IfcOpenShell</td>
+<td>LGPL-3.0-or-later*</td>
+</tr>
+<tr>
+<td>ifcjni</td>
+<td>Internal library for IfcOpenShell</td>
+<td>LGPL-3.0-or-later*</td>
+</tr>
+<tr>
+<td>ifcmax</td>
+<td>Historic extension for IFC support in 3DS Max</td>
+<td>LGPL-3.0-or-later*</td>
+</tr>
+<tr>
+<td>ifcopenshell-python</td>
+<td>Python library for IFC manipulation</td>
+<td>LGPL-3.0-or-later*</td>
+</tr>
+<tr>
+<td>ifcparse</td>
+<td>Internal library for IfcOpenShell</td>
+<td>LGPL-3.0-or-later*</td>
+</tr>
+<tr>
+<td>ifcpatch</td>
+<td>Utility to run pre-packaged scripts to manipulate IFCs</td>
+<td>LGPL-3.0-or-later</td>
+</tr>
+<tr>
+<td>ifcsverchok</td>
+<td>Blender Add-on for visual node programming with IFC</td>
+<td>GPL-3.0-or-later</td>
+</tr>
+<tr>
+<td>ifctester</td>
+<td>Library, CLI and webapp for IDS model auditing</td>
+<td>LGPL-3.0-or-later</td>
+</tr>
+<tr>
+<td>ifcwrap</td>
+<td>Internal library for IfcOpenShell</td>
+<td>LGPL-3.0-or-later*</td>
+</tr>
+<tr>
+<td>qtviewer</td>
+<td>Internal library for IfcOpenShell</td>
+<td>LGPL-3.0-or-later*</td>
+</tr>
+<tr>
+<td>serializers</td>
+<td>Internal library for IfcOpenShell</td>
+<td>LGPL-3.0-or-later*</td>
+</tr>
+</tbody>
 </table>
 
-Contents
---------
-
-The IfcOpenShell C++ codebase is split into multiple interal libraries:
-
-<table>
-  <tr>
-      <td>Name</td>
-      <td>Description</td>
-      <td>License</td>
-  </tr>
-  <tr>
-      <td>ifcgeom</td>
-      <td>Internal library for IfcOpenShell</td>
-      <td>LGPL-3.0-or-later*</td>
-  </tr>
-  <tr>
-      <td>ifcgeom_schema_agnostic</td>
-      <td>Internal library for IfcOpenShell</td>
-      <td>LGPL-3.0-or-later*</td>
-  </tr>
-  <tr>
-      <td>ifcgeomserver</td>
-      <td>Internal library for IfcOpenShell</td>
-      <td>LGPL-3.0-or-later*</td>
-  </tr>
-  <tr>
-      <td>ifcjni</td>
-      <td>Internal library for IfcOpenShell</td>
-      <td>LGPL-3.0-or-later*</td>
-  </tr>
-  <tr>
-      <td>ifcparse</td>
-      <td>Internal library for IfcOpenShell</td>
-      <td>LGPL-3.0-or-later*</td>
-  </tr>
-  <tr>
-      <td>ifcwrap</td>
-      <td>Internal library for IfcOpenShell</td>
-      <td>LGPL-3.0-or-later*</td>
-  </tr>
-  <tr>
-      <td>qtviewer</td>
-      <td>Internal library for IfcOpenShell</td>
-      <td>LGPL-3.0-or-later*</td>
-  </tr>
-  <tr>
-      <td>serializers</td>
-      <td>Internal library for IfcOpenShell</td>
-      <td>LGPL-3.0-or-later*</td>
-  </tr>
-</table>
-
-<a href="https://github.com/IfcOpenShell/IfcOpenShell/tree/master/COPYING.LESSER" title="LGPL-3.0-or-later">LGPL</a>
-<a href="https://technical.buildingsmart.org/standards/ifc/" title="IFC">IFC</a>
-<a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/" title="IFC2x3 TC1">IFC2x3 TC1</a>
-<a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/" title="IFC4 Add2 TC1">IFC4 Add2 TC1</a>
-<a href="https://www.visualstudio.com/" title="Visual Studio">Visual Studio</a>
-<a href="http://landinghub.visualstudio.com/visual-cpp-build-tools" title="Visual C++ Build Tools">Visual C++ Build Tools</a>
-<a href="https://msys2.github.io/" title="MSYS2">MSYS2</a>
-<a href="https://github.com/IfcOpenShell/IfcOpenShell/tree/master/win/readme.md" title="win/readme.md">win/readme.md</a>
-<a href="https://github.com/IfcOpenShell/IfcOpenShell/tree/master/nix/build-all.py" title="nix/build-all.py">nix/build-all.py</a>
-
+[LGPL]: https://github.com/IfcOpenShell/IfcOpenShell/tree/master/COPYING.LESSER "LGPL-3.0-or-later"
+[IFC]: https://technical.buildingsmart.org/standards/ifc/ "IFC"
+[IFC2x3 TC1]: https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ "IFC2x3 TC1"
+[IFC4 Add2 TC1]: https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/ "IFC4 Add2 TC1"
+[Visual Studio]: https://www.visualstudio.com/ "Visual Studio"
+[Visual C++ Build Tools]: http://landinghub.visualstudio.com/visual-cpp-build-tools "Visual C++ Build Tools"
+[MSYS2]: https://msys2.github.io/ "MSYS2"
+[win/readme.md]: https://github.com/IfcOpenShell/IfcOpenShell/tree/master/win/readme.md "win/readme.md"
+[nix/build-all.py]: https://github.com/IfcOpenShell/IfcOpenShell/tree/master/nix/build-all.py "nix/build-all.py"
 
 Current build status
 ====================
@@ -253,38 +265,73 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_python3.10.____cpython</td>
+              <td>linux_64_hdf51.14.3python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.3python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.11.____cpython</td>
+              <td>linux_64_hdf51.14.3python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.3python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.12.____cpython</td>
+              <td>linux_64_hdf51.14.3python3.12.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.12.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.3python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.13.____cp313</td>
+              <td>linux_64_hdf51.14.3python3.13.____cp313</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.13.____cp313" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.3python3.13.____cp313" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.9.____cpython</td>
+              <td>linux_64_hdf51.14.3python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.3python3.9.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_hdf51.14.4python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.4python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_hdf51.14.4python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.4python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_hdf51.14.4python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.4python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_hdf51.14.4python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.4python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_hdf51.14.4python3.9.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6954&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ifcopenshell-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.4python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -583,10 +630,10 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-bcf--client-green.svg)](https://anaconda.org/conda-forge/bcf-client) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/bcf-client.svg)](https://anaconda.org/conda-forge/bcf-client) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/bcf-client.svg)](https://anaconda.org/conda-forge/bcf-client) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/bcf-client.svg)](https://anaconda.org/conda-forge/bcf-client) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-ifcopenshell-green.svg)](https://anaconda.org/conda-forge/ifcopenshell) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ifcopenshell.svg)](https://anaconda.org/conda-forge/ifcopenshell) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ifcopenshell.svg)](https://anaconda.org/conda-forge/ifcopenshell) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ifcopenshell.svg)](https://anaconda.org/conda-forge/ifcopenshell) |
 
-Installing ifcopenshell-packages
-================================
+Installing ifcopenshell
+=======================
 
-Installing `ifcopenshell-packages` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `ifcopenshell` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
@@ -672,17 +719,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating ifcopenshell-packages-feedstock
-========================================
+Updating ifcopenshell-feedstock
+===============================
 
-If you would like to improve the ifcopenshell-packages recipe or build a new
+If you would like to improve the ifcopenshell recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/ifcopenshell-packages-feedstock are
+Note that all branches in the conda-forge/ifcopenshell-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.

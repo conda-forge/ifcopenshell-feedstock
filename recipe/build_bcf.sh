@@ -1,1 +1,0 @@
-pip install src/bcf -v --no-deps --ignore-installed
