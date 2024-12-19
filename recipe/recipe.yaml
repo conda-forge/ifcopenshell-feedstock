@@ -87,14 +87,6 @@ outputs:
           pip_check: false
       - script:
           - python -c "import ifcopenshell; assert ifcopenshell.version == '${{ version }}', 'print(ifcopenshell.version)'"
-#          - pytest src/ifcopenshell-python/test
-#        files:
-#          source:
-#            - src/ifcopenshell-python/test/Sample-BIM-Files/
-#            - src/ifcopenshell-python/test/
-#          recipe:
-#            - pytest.ini
-# # had to remove these because it generated too long paths on windows
         requirements:
           run:
             - occt * *novtk*  # Ensure that even though compiled against OCCT with VTK, it can still run with OCCT without VTK
