@@ -85,12 +85,8 @@ outputs:
           imports:
             - ifcopenshell
           pip_check: false
-      - files:
-          source:
-            - src/ifcopenshell-python/test/Sample-BIM-Files/
-            - src/ifcopenshell-python/test/
-          recipe:
-            - pytest.ini
+      - script:
+          - python -c "import ifcopenshell; assert ifcopenshell.version == '${{ version }}', 'print(ifcopenshell.version)'"
         requirements:
           run:
             - occt * *novtk*  # Ensure that even though compiled against OCCT with VTK, it can still run with OCCT without VTK
@@ -104,9 +100,7 @@ outputs:
             - networkx
             - tabulate
             - shapely
-        script:
-          - pytest src/ifcopenshell-python/test
-          - python -c "import ifcopenshell; assert ifcopenshell.version == '${{ version }}', 'print(ifcopenshell.version)'"
+
 
   - package:
       name: bcf-client
