@@ -1,5 +1,5 @@
 context:
-  version: "0.8.0"
+  version: "0.8.1"
   build: 6
   python_min: "3.9"
 
@@ -9,7 +9,7 @@ recipe:
 
 source:
   - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/ifcopenshell-python-${{ version }}.tar.gz
-    sha256: 9666e945be059654ef4f29edb8920364c00a191f3123dc3d48ab89409b9e3582
+    sha256: d0089bf60f15fc5ea8752dc146388d5c56fc5cad46b18dac781d1eeb4657c05f
     patches:
       - patches/fix_boost_mt19937_issue.patch
       - patches/fix_IfcLogger_missing_newlines_in_boost_1_86.patch
