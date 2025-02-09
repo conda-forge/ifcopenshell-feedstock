@@ -10,10 +10,6 @@ recipe:
 source:
   - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/ifcopenshell-python-${{ version }}.tar.gz
     sha256: d0089bf60f15fc5ea8752dc146388d5c56fc5cad46b18dac781d1eeb4657c05f
-    patches:
-      - patches/fix_boost_mt19937_issue.patch
-      - patches/fix_IfcLogger_missing_newlines_in_boost_1_86.patch
-      - patches/cgal_6_aab_traits_removal_ifdef.patch
 
   - url: https://github.com/IfcOpenShell/files/archive/ed6b97983ff1324a0eaec0fd676ab58051cf3059.tar.gz
     target_directory: test/input
