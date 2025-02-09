@@ -11,25 +11,25 @@ source:
   - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/ifcopenshell-python-${{ version }}.tar.gz
     sha256: d0089bf60f15fc5ea8752dc146388d5c56fc5cad46b18dac781d1eeb4657c05f
 
-  - url: https://github.com/IfcOpenShell/files/archive/ed6b97983ff1324a0eaec0fd676ab58051cf3059.tar.gz
+  - url: https://github.com/IfcOpenShell/files/archive/20a17fcf3b1be2bc48af0273f7604af5b7cc4068.tar.gz
     target_directory: test/input
-    sha256: 2bf8cabd6364fbb09b4e7351397beb631d47d9574ee89c98510066acec3a58ac
+    sha256: 668d1849f790075fcbe46669d5c1fc6e9339a6b3bb78f08e0aa4479289f93b70
 
   - url: https://github.com/opensourceBIM/python-mvdxml/archive/83c12fa494b9d6a5a370d8525dc1f76aa5c89d8d.tar.gz
     target_directory: src/ifcopenshell-python/ifcopenshell/mvd
     sha256: 3a332aae707967e609dcab44a118a88ec270c551e7222eb53fc8ba809e9e7a0d
 
-  - url: https://github.com/IfcOpenShell/svgfill/archive/f9102b1e9f58e2c3bf9923c1eafa0373eeb872f5.tar.gz
+  - url: https://github.com/IfcOpenShell/svgfill/archive/ff00026cd359d83c8aebe43b550f7f75a04a359a.tar.gz
     target_directory: src/svgfill
-    sha256: b0b3f3b98a204a7315ec7cca24278600d192bdb7ae8462e10eca0cd0aeaf52d8
+    sha256: 0ceb724b81dd7204c2fb61fabe588d85b1ca9d711e4b7e81a5ba11f5f6c25f32
 
-  - url: https://github.com/IfcOpenShell/ids-test-files/archive/adadc7740b7337f4cb0935ec8e84ba30ed4ca10d.tar.gz
+  - url: https://github.com/IfcOpenShell/ids-test-files/archive/2daf6c46ed9fc7a17259ef6d4c17c3553ef642cd.tar.gz
     target_directory: src/ifcopenshell-python/test/Sample-BIM-Files
-    sha256: d0b86d456a8575d6b72186a01f2fb2ba93b86058ce6b178045a6d11e3468e3f6
+    sha256: fc22893af932535d49efe23a1d26c1742ffdba107b1e8a517b2e5c2af5e4d430
 
-  - url: https://github.com/svgpp/svgpp/archive/15da1891e576e8ef66dbe90e8e1a776dccea889d.tar.gz
+  - url: https://github.com/svgpp/svgpp/archive/cb57e8b61dbdbc9a38c15717acb9372aaf5fb0d4.tar.gz
     target_directory: src/svgfill/3rdparty/svgpp
-    sha256: 5364b6a2d49c37fe3d0669366ec07348378868d1f0d94674cd1af97229adc558
+    sha256: b78c9fd184d00488da8d346a838b76f238530323f400acb780a16762700bd309
 
 build:
   number: ${{ build }}
