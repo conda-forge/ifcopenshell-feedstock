@@ -112,7 +112,7 @@ outputs:
       script: pip install src/bcf -v --no-deps --ignore-installed
     requirements:
       host:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
         - setuptools
         - pip
       run:
@@ -134,7 +134,7 @@ outputs:
         requirements:
           run:
             - pytest
-            - python ${{ python_min }}
+            - python ${{ python_min }}.*
             - ifcopenshell
 
 
