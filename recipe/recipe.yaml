@@ -10,8 +10,8 @@ recipe:
 source:
   - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/ifcopenshell-python-${{ version }}.tar.gz
     sha256: d0089bf60f15fc5ea8752dc146388d5c56fc5cad46b18dac781d1eeb4657c05f
-#    patches:
-#      - patches/fix_py310_support.patch
+    patches:
+      - patches/fix_py310_support.patch
 
   - url: https://github.com/IfcOpenShell/files/archive/20a17fcf3b1be2bc48af0273f7604af5b7cc4068.tar.gz
     target_directory: test/input
@@ -112,11 +112,11 @@ outputs:
       script: pip install src/bcf -v --no-deps --ignore-installed
     requirements:
       host:
-        - python
+        - python ${{ python_min }}
         - setuptools
         - pip
       run:
-        - python
+        - python >=${{ python_min }}
         - requests
         - numpy
         - xsdata
@@ -134,6 +134,7 @@ outputs:
         requirements:
           run:
             - pytest
+            - python ${{ python_min }}
             - ifcopenshell
 
 
