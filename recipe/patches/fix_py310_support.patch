@@ -1,0 +1,19 @@
+Subject: [PATCH] fix py310 support
+---
+Index: src/ifcopenshell-python/ifcopenshell/util/shape_builder.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ifcopenshell-python/ifcopenshell/util/shape_builder.py b/src/ifcopenshell-python/ifcopenshell/util/shape_builder.py
+--- a/src/ifcopenshell-python/ifcopenshell/util/shape_builder.py	(revision 5db6738ac28ceee3e536c2d562526f9a18c007f6)
++++ b/src/ifcopenshell-python/ifcopenshell/util/shape_builder.py	(date 1739806951084)
+@@ -44,7 +44,7 @@
+     VectorType = Union[Sequence[float], Vector, np.ndarray]
+ else:
+     # Ensure it's exportable, so other modules can reuse it for typing.
+-    VectorType = ...
++    VectorType = Any
+ 
+ SequenceOfVectors = Union[Sequence[VectorType], np.ndarray]
+ 
