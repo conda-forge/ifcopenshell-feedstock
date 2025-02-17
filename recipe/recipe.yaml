@@ -134,7 +134,7 @@ outputs:
         requirements:
           run:
             - pytest
-            - python ${{ python_min }}.*
+            - python
             - ifcopenshell
 
 
