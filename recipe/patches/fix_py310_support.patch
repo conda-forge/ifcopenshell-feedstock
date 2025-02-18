@@ -1,0 +1,59 @@
+Subject: [PATCH] fix py310 support
+---
+Index: src/ifcopenshell-python/ifcopenshell/util/representation.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ifcopenshell-python/ifcopenshell/util/representation.py b/src/ifcopenshell-python/ifcopenshell/util/representation.py
+--- a/src/ifcopenshell-python/ifcopenshell/util/representation.py	(revision 5db6738ac28ceee3e536c2d562526f9a18c007f6)
++++ b/src/ifcopenshell-python/ifcopenshell/util/representation.py	(date 1739863923723)
+@@ -146,7 +146,7 @@
+             return r
+ 
+ 
+-def guess_type(items: Sequence[ifcopenshell.entity_instance]) -> str | None:
++def guess_type(items: Sequence[ifcopenshell.entity_instance]) -> Union[str, None]:
+     """Guesses the appropriate RepresentationType attribute based on a list of items
+ 
+     :param items: A list of IfcRepresentationItem, typically in an IfcShapeRepresentation
+Index: src/ifcopenshell-python/ifcopenshell/util/shape_builder.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ifcopenshell-python/ifcopenshell/util/shape_builder.py b/src/ifcopenshell-python/ifcopenshell/util/shape_builder.py
+--- a/src/ifcopenshell-python/ifcopenshell/util/shape_builder.py	(revision 5db6738ac28ceee3e536c2d562526f9a18c007f6)
++++ b/src/ifcopenshell-python/ifcopenshell/util/shape_builder.py	(date 1739863829971)
+@@ -44,7 +44,7 @@
+     VectorType = Union[Sequence[float], Vector, np.ndarray]
+ else:
+     # Ensure it's exportable, so other modules can reuse it for typing.
+-    VectorType = ...
++    VectorType = Any
+ 
+ SequenceOfVectors = Union[Sequence[VectorType], np.ndarray]
+ 
+Index: src/ifcopenshell-python/ifcopenshell/api/geometry/validate_type.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ifcopenshell-python/ifcopenshell/api/geometry/validate_type.py b/src/ifcopenshell-python/ifcopenshell/api/geometry/validate_type.py
+--- a/src/ifcopenshell-python/ifcopenshell/api/geometry/validate_type.py	(revision 5db6738ac28ceee3e536c2d562526f9a18c007f6)
++++ b/src/ifcopenshell-python/ifcopenshell/api/geometry/validate_type.py	(date 1739863917684)
+@@ -18,12 +18,12 @@
+ 
+ import ifcopenshell.api.geometry
+ import ifcopenshell.util.representation
+-
++from typing import Union
+ 
+ def validate_type(
+     file: ifcopenshell.file,
+     representation: ifcopenshell.entity_instance,
+-    preferred_item: ifcopenshell.entity_instance | None = None,
++    preferred_item: Union[ifcopenshell.entity_instance, None] = None,
+ ) -> bool:
+     """Validates the RepresentationType of an IfcShapeRepresentation
+ 
