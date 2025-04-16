@@ -1,6 +1,6 @@
 context:
-  version: "0.8.1"
-  build: 7
+  version: "0.8.2"
+  build: 0
   python_min: "3.10"
 
 recipe:
@@ -9,7 +9,7 @@ recipe:
 
 source:
   - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/ifcopenshell-python-${{ version }}.tar.gz
-    sha256: d0089bf60f15fc5ea8752dc146388d5c56fc5cad46b18dac781d1eeb4657c05f
+    sha256: 60e86db9e237e61702af878cd1e37da2e41375db8984f915627db4277acb863e
     patches:
       - patches/fix_py310_support.patch
 
