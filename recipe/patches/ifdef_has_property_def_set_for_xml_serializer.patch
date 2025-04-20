@@ -1,0 +1,27 @@
+Subject: [PATCH] ifdef has property def set for xml serializer
+---
+Index: src/serializers/schema_dependent/XmlSerializer.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/serializers/schema_dependent/XmlSerializer.cpp b/src/serializers/schema_dependent/XmlSerializer.cpp
+--- a/src/serializers/schema_dependent/XmlSerializer.cpp	(revision ecee3781e42c22fc307ac1dbb265d7e10c581b27)
++++ b/src/serializers/schema_dependent/XmlSerializer.cpp	(date 1745156421086)
+@@ -305,6 +305,7 @@
+ 			<IfcSchema::IfcObject, IfcSchema::IfcRelDefinesByProperties, IfcSchema::IfcPropertySetDefinition>
+ 			(object, &IfcSchema::IfcObject::IsDefinedBy, &IfcSchema::IfcRelDefinesByProperties::RelatingPropertyDefinition);
+ 
++#ifdef SCHEMAS_HAS_IfcPropertySetDefinitionSet
+ 		aggregate_of<IfcSchema::IfcPropertySetDefinitionSet>::ptr property_set_sets = get_related
+ 			<IfcSchema::IfcObject, IfcSchema::IfcRelDefinesByProperties, IfcSchema::IfcPropertySetDefinitionSet>
+ 			(object, &IfcSchema::IfcObject::IsDefinedBy, &IfcSchema::IfcRelDefinesByProperties::RelatingPropertyDefinition);
+@@ -312,7 +313,7 @@
+ 		for (auto& s : *property_set_sets) {
+ 			 property_sets->push((decltype(property_sets))*s);
+ 		}
+-
++#endif
+ 		for (IfcSchema::IfcPropertySetDefinition::list::it it = property_sets->begin(); it != property_sets->end(); ++it) {
+ 			IfcSchema::IfcPropertySetDefinition* pset = *it;
+ 			if (pset->declaration().is(IfcSchema::IfcPropertySet::Class())) {
