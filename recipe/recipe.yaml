@@ -83,7 +83,7 @@ outputs:
       - python:
           imports:
             - ifcopenshell
-            - ifcopenshell.util.shape_builder
+            #- ifcopenshell.util.shape_builder
           pip_check: false
       - script:
           - python -c "import ifcopenshell; assert ifcopenshell.version == '${{ version }}', 'print(ifcopenshell.version)'"
