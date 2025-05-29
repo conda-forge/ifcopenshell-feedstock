@@ -1,6 +1,6 @@
 context:
   version: "0.8.2"
-  build: 2
+  build: 3
   python_min: "3.10"
 
 recipe:
@@ -75,6 +75,7 @@ outputs:
       run:
         - python
         - shapely
+        - typing_extensions
         - ${{ pin_compatible('occt', upper_bound='x.x.x') }}
         - ${{ pin_compatible('cgal-cpp', upper_bound='x.x') }}
       run_exports:
