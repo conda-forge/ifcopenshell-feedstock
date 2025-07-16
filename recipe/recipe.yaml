@@ -10,8 +10,6 @@ recipe:
 source:
   - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/ifcopenshell-python-${{ version }}.tar.gz
     sha256: b0eec489ffa161838a15fa001d1db6e065da2624e49136616f5fcdbb2caf4b0e
-    patches:
-      - patches/ifdef_has_property_def_set_for_xml_serializer.patch
 
   - url: https://github.com/IfcOpenShell/files/archive/20a17fcf3b1be2bc48af0273f7604af5b7cc4068.tar.gz
     target_directory: test/input
