@@ -1,6 +1,6 @@
 context:
   version: "0.8.3.post1"
-  build: 2
+  build: 3
   python_min: "3.10"
 
 recipe:
@@ -62,7 +62,7 @@ outputs:
         - python
         - libboost-devel
         - occt
-        - libxml2
+        - libxml2-devel
         - cgal-cpp
         - hdf5
         - eigen
