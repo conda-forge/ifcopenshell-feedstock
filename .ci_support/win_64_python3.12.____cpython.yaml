@@ -14,8 +14,8 @@ hdf5:
 - 1.14.6
 libboost_devel:
 - '1.88'
-libxml2:
-- '2.13'
+libxml2_devel:
+- '2.14'
 mpfr:
 - '4'
 occt:
