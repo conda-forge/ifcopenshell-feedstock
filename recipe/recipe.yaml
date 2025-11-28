@@ -74,6 +74,7 @@ outputs:
         - python
         - shapely
         - typing_extensions
+        - ${{ pin_compatible('hdf5', upper_bound='x.x') }}
         - ${{ pin_compatible('occt', upper_bound='x.x.x') }}
         - ${{ pin_compatible('cgal-cpp', upper_bound='x.x') }}
       run_exports:
