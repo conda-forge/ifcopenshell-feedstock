@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Cmake files from a newer commit (349cbf27) that fixes build issues with HDF5 on osx and linux arch64
+cp -r "${RECIPE_DIR}/config/cmake" "${SRC_DIR}/cmake"
+
 # IF osx use file lib suffix .dylib
 # IF linux use file lib suffix .so
 # IF windows use file lib suffix .dll
