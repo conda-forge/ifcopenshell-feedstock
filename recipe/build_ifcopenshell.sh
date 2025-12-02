@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Cmake files from a newer commit (349cbf27) that fixes build issues with HDF5 on osx and linux arch64
-cp -r "${RECIPE_DIR}/config/cmake" "${SRC_DIR}/cmake"
-
 # IF osx use file lib suffix .dylib
 # IF linux use file lib suffix .so
 # IF windows use file lib suffix .dll
@@ -19,11 +16,10 @@ cmake ${CMAKE_ARGS} -G Ninja \
  -DSCHEMA_VERSIONS="2x3;4;4x1;4x3_add2" \
  -DCMAKE_BUILD_TYPE=Release \
  -DCMAKE_INSTALL_PREFIX=$PREFIX \
-  ${CMAKE_PLATFORM_FLAGS[@]} \
  -DCMAKE_PREFIX_PATH=$PREFIX \
  -DCMAKE_SYSTEM_PREFIX_PATH=$PREFIX \
  -DPYTHON_EXECUTABLE:FILEPATH=$PYTHON \
- -DPYTHON_INCLUDE_DIR:FILEPATH=$PREFIX/include/python$PY_VER \
+ -DPYTHON_INCLUDE_DIR:FILEPATH=$PREFIX/include \
  -DGMP_LIBRARY_DIR=$PREFIX/lib \
  -DMPFR_LIBRARY_DIR=$PREFIX/lib \
  -DOCC_INCLUDE_DIR=$PREFIX/include/opencascade \
@@ -44,7 +40,6 @@ cmake ${CMAKE_ARGS} -G Ninja \
  -DBUILD_IFCGEOM:BOOL=ON \
  -DBUILD_GEOMSERVER:BOOL=OFF \
  -DBOOST_USE_STATIC_LIBS:BOOL=OFF \
- -DCITYJSON_SUPPORT:BOOL=OFF \
  ./cmake
 
 ninja
