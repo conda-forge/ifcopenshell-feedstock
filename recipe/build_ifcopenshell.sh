@@ -11,6 +11,13 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     export FSUFFIX=so
 fi
 
+# Cmake files from a newer commit (349cbf27) that fixes build issues with HDF5 on osx and linux arch64
+# Copy contents explicitly to avoid creating cmake/cmake/ nesting
+cp "${RECIPE_DIR}/config/cmake/"* "${SRC_DIR}/cmake/"
+
+# Remove the upstream HDF5Config.cmake to prevent it from interfering with our custom FindHDF5.cmake
+# This ensures find_package(HDF5) uses Module mode and finds our new file.
+rm "${SRC_DIR}/cmake/HDF5Config.cmake" || true
 
 cmake ${CMAKE_ARGS} -G Ninja \
  -DSCHEMA_VERSIONS="2x3;4;4x1;4x3_add2" \
