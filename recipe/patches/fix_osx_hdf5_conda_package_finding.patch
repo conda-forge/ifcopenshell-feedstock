@@ -1,0 +1,68 @@
+Subject: [PATCH] fix osx hdf5 conda package finding
+---
+Index: cmake/HDF5Config.cmake
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cmake/HDF5Config.cmake b/cmake/HDF5Config.cmake
+--- a/cmake/HDF5Config.cmake	(revision 158fe92644cfe2bc37be513d9838c95d9f2233cf)
++++ b/cmake/HDF5Config.cmake	(date 1765010060262)
+@@ -1,3 +1,4 @@
++message(STATUS "Applying custom HDF5 finding algorithm")
+ # To avoid cyclic calls to this file
+ list(REMOVE_ITEM CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR})
+ 
+@@ -41,27 +42,15 @@
+     else()
+         message(STATUS "Packaging hdf5 and zlib for conda distribution")
+ 
+-        if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+-            # macOS
+-            set(zlib_post libz)
+-            set(lib_ext dylib)
+-            set(HDF5_LIBRARIES
+-                "${HDF5_LIBRARY_DIR}/libhdf5_cpp.${lib_ext}"
+-                "${HDF5_LIBRARY_DIR}/libhdf5.${lib_ext}"
+-                "${HDF5_LIBRARY_DIR}/${zlib_post}.${lib_ext}"
+-            )
+-        else()
+-            # linux and windows
+-            # Find HDF5 package
+-            find_package(HDF5 REQUIRED COMPONENTS C CXX)
+-            # Find ZLIB package
+-            find_package(ZLIB REQUIRED)
+-            # Include directories
+-            include_directories(${HDF5_INCLUDE_DIRS} ${ZLIB_INCLUDE_DIRS})
+-            # Link libraries
+-            set(HDF5_LIBRARIES ${HDF5_LIBRARIES} ${ZLIB_LIBRARIES})
+-            message(STATUS "HDF5 libraries: ${HDF5_LIBRARIES}")
+-        endif()
++        # Find HDF5 package
++        find_package(HDF5 REQUIRED COMPONENTS C CXX)
++        # Find ZLIB package
++        find_package(ZLIB REQUIRED)
++        # Include directories
++        include_directories(${HDF5_INCLUDE_DIRS} ${ZLIB_INCLUDE_DIRS})
++        # Link libraries
++        set(HDF5_LIBRARIES ${HDF5_LIBRARIES} ${ZLIB_LIBRARIES})
++        message(STATUS "HDF5 libraries: ${HDF5_LIBRARIES}")
+     endif()
+ endif()
+ 
+Index: cmake/CMakeLists.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cmake/CMakeLists.txt b/cmake/CMakeLists.txt
+--- a/cmake/CMakeLists.txt	(revision 158fe92644cfe2bc37be513d9838c95d9f2233cf)
++++ b/cmake/CMakeLists.txt	(date 1764962555665)
+@@ -526,6 +526,7 @@
+ 
+ if(HDF5_SUPPORT)
+     find_package(HDF5 REQUIRED COMPONENTS C CXX)
++    set(IFCOPENSHELL_LIBRARIES ${IFCOPENSHELL_LIBRARIES} hdf5::hdf5_cpp)
+ 
+     add_definitions(-DWITH_HDF5)
+     set(SWIG_DEFINES ${SWIG_DEFINES} -DWITH_HDF5)

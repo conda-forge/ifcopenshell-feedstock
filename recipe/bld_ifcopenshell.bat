@@ -3,6 +3,7 @@ mkdir build && cd build
 REM Remove dot from PY_VER for use in library name
 REM From https://github.com/tpaviot/pythonocc-core/blob/master/ci/conda/bld.bat
 set MY_PY_VER=%PY_VER:.=%
+echo MY_PY_VER=%MY_PY_VER%
 
 set LIBXML2="%LIBRARY_PREFIX%/lib/libxml2.lib"
 
@@ -15,7 +16,6 @@ cmake -G "Ninja" ^
  -D OCC_INCLUDE_DIR:FILEPATH="%LIBRARY_PREFIX%\include\opencascade" ^
  -D OCC_LIBRARY_DIR:FILEPATH="%LIBRARY_PREFIX%\lib" ^
  -D CGAL_INCLUDE_DIR:FILEPATH="%LIBRARY_PREFIX%\include" ^
- -D EIGEN_DIR:FILEPATH="%LIBRARY_PREFIX%\include\eigen3" ^
  -D LIBXML2_INCLUDE_DIR=%LIBRARY_PREFIX%/include/libxml2 ^
  -D LIBXML2_LIBRARIES=%LIBRARY_PREFIX%/lib/libxml2.lib ^
  -D GMP_INCLUDE_DIR:FILEPATH="%LIBRARY_PREFIX%\include" ^
@@ -41,9 +41,8 @@ cmake -G "Ninja" ^
  -D Boost_LIBRARY_DIR:FILEPATH="%LIBRARY_PREFIX%\lib" ^
  -D Boost_INCLUDE_DIR:FILEPATH="%LIBRARY_PREFIX%\include" ^
  -D Boost_USE_STATIC_LIBS:BOOL=OFF ^
- -D CITYJSON_SUPPORT:BOOL=OFF ^
  ../cmake
- 
+
 if errorlevel 1 exit 1
 
 ninja install -j 1

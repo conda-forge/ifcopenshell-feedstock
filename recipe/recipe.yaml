@@ -1,6 +1,6 @@
 context:
-  version: "0.8.3.post1"
-  build: 3
+  version: "0.8.4"
+  build: 1
   python_min: "3.10"
 
 recipe:
@@ -9,7 +9,10 @@ recipe:
 
 source:
   - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/ifcopenshell-python-${{ version }}.tar.gz
-    sha256: 08135d3525702022d20930e171104938dc9516a4efc231d02d2d18d3eeba0723
+    sha256: 4ed26e8f7add770001eda032c9858a90397d19fdacc829719e5893886d5c0a5e
+    patches:
+      - patches/add_hdf5_envvar_unification.patch
+      - patches/fix_osx_hdf5_conda_package_finding.patch
 
   - url: https://github.com/IfcOpenShell/files/archive/20a17fcf3b1be2bc48af0273f7604af5b7cc4068.tar.gz
     target_directory: test/input
@@ -74,6 +77,7 @@ outputs:
         - python
         - shapely
         - typing_extensions
+        - ${{ pin_compatible('hdf5', upper_bound='x.x') }}
         - ${{ pin_compatible('occt', upper_bound='x.x.x') }}
         - ${{ pin_compatible('cgal-cpp', upper_bound='x.x') }}
       run_exports:
