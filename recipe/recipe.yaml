@@ -73,6 +73,8 @@ outputs:
         - nlohmann_json
         - gmp
         - zlib
+        - rocksdb <10.7.5   # Newer versions require c++20
+        - zstd
       run:
         - python
         - shapely
