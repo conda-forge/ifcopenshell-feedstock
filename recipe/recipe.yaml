@@ -13,6 +13,7 @@ source:
     patches:
       - patches/add_hdf5_envvar_unification.patch
       - patches/fix_osx_hdf5_conda_package_finding.patch
+      - patches/Update_RocksDB_and_ZSTD_linking_logic.patch
 
   - url: https://github.com/IfcOpenShell/files/archive/20a17fcf3b1be2bc48af0273f7604af5b7cc4068.tar.gz
     target_directory: test/input
@@ -114,6 +115,7 @@ outputs:
       noarch: python
       skip:
         - match(python, "<3.10")
+        - match(python, ">=3.14")
         - build_platform != target_platform
       script: pip install src/bcf -v --no-deps --ignore-installed
     requirements:
