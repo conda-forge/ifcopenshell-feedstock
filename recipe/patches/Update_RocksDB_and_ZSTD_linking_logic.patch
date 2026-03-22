@@ -1,0 +1,29 @@
+Subject: [PATCH] Update RocksDB and ZSTD linking logic
+---
+Index: cmake/CMakeLists.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cmake/CMakeLists.txt b/cmake/CMakeLists.txt
+--- a/cmake/CMakeLists.txt	(revision 158fe92644cfe2bc37be513d9838c95d9f2233cf)
++++ b/cmake/CMakeLists.txt	(date 1765572267026)
+@@ -332,7 +332,7 @@
+     message(STATUS "RocksDB: found at '${RocksDB_DIR}'.")
+     add_definitions(-DIFOPSH_WITH_ROCKSDB)
+     set(SWIG_DEFINES ${SWIG_DEFINES} -DIFOPSH_WITH_ROCKSDB)
+-    link_libraries(RocksDB::rocksdb)
++    link_libraries($<IF:$<TARGET_EXISTS:RocksDB::rocksdb-shared>,RocksDB::rocksdb-shared,RocksDB::rocksdb>)
+ 
+     if (WITH_ZSTD)
+         # @todo do we actually need the zstd include dir or rather just pass
+@@ -340,7 +340,8 @@
+         # detect based on rocksdb API?
+         find_package(zstd CONFIG REQUIRED)
+         message(STATUS "zstd: found at '${zstd_DIR}'.")
+-        link_libraries(zstd::libzstd_static)
++        # after find_package(zstd CONFIG REQUIRED)
++        link_libraries($<IF:$<TARGET_EXISTS:ZSTD::ZSTD>,ZSTD::ZSTD,$<IF:$<TARGET_EXISTS:zstd::libzstd_static>,zstd::libzstd_static,$<IF:$<TARGET_EXISTS:zstd::libzstd_shared>,zstd::libzstd_shared,zstd>>>)
+ 
+         add_definitions(-DIFOPSH_WITH_ROCKSDB_ZSTD)
+         set(SWIG_DEFINES ${SWIG_DEFINES} -DIFOPSH_WITH_ROCKSDB_ZSTD)
