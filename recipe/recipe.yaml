@@ -19,10 +19,6 @@ source:
     target_directory: src/ifcopenshell-python/ifcopenshell/mvd
     sha256: 3a332aae707967e609dcab44a118a88ec270c551e7222eb53fc8ba809e9e7a0d
 
-  - url: https://github.com/IfcOpenShell/svgfill/archive/ff00026cd359d83c8aebe43b550f7f75a04a359a.tar.gz
-    target_directory: src/svgfill
-    sha256: 0ceb724b81dd7204c2fb61fabe588d85b1ca9d711e4b7e81a5ba11f5f6c25f32
-
   - url: https://github.com/IfcOpenShell/ids-test-files/archive/2daf6c46ed9fc7a17259ef6d4c17c3553ef642cd.tar.gz
     target_directory: src/ifcopenshell-python/test/Sample-BIM-Files
     sha256: fc22893af932535d49efe23a1d26c1742ffdba107b1e8a517b2e5c2af5e4d430
