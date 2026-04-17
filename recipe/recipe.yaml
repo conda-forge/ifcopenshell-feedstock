@@ -10,9 +10,6 @@ recipe:
 source:
   - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/ifcopenshell-python-${{ version }}.tar.gz
     sha256: 185b97d79c800603685c60abd1497df242050dbb117dcaccbaebdec0cdf25dd5
-    patches:
-      - patches/add_hdf5_envvar_unification.patch
-      - patches/fix_osx_hdf5_conda_package_finding.patch
 
   - url: https://github.com/IfcOpenShell/files/archive/20a17fcf3b1be2bc48af0273f7604af5b7cc4068.tar.gz
     target_directory: test/input
