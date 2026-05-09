@@ -1,6 +1,6 @@
 context:
   version: "0.8.5"
-  build: 1
+  build: 2
   python_min: "3.10"
 
 recipe:
@@ -79,6 +79,7 @@ outputs:
         - ${{ pin_compatible('cgal-cpp', upper_bound='x.x') }}
       run_exports:
         - ${{ pin_subpackage('ifcopenshell', upper_bound='x.x.x') }}
+        - ${{ pin_compatible('rocksdb', upper_bound='x.x') }}
     tests:
       - python:
           imports:
