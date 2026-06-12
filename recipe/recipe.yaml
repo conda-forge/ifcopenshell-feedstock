@@ -1,6 +1,6 @@
 context:
   version: "0.8.5"
-  build: 4
+  build: 5
   python_min: "3.10"
 
 recipe:
@@ -12,6 +12,7 @@ source:
     sha256: 185b97d79c800603685c60abd1497df242050dbb117dcaccbaebdec0cdf25dd5
     patches:
       - patches/Update_ZSTD_linking_logic.patch
+      - patches/Fix_boost_1.90_compatibility.patch
 
   - url: https://github.com/IfcOpenShell/files/archive/20a17fcf3b1be2bc48af0273f7604af5b7cc4068.tar.gz
     target_directory: test/input
