@@ -1,0 +1,51 @@
+Subject: [PATCH] Fix CGAL 6.x build: add Point_d_4d_Less comparator for std::map
+
+Backport of upstream IfcOpenShell PR #8141 (merged 2026-06-05, commit
+eacff93945ca73c64c5432b61ad3f8befc67ce51), not yet in a tagged release.
+CGAL 6.2 deletes operator< for the d-dimensional Epick_d Point_d, breaking
+the std::map/std::set containers keyed on Point_d in nef_to_halfspace_tree.h.
+Drop this patch once a release containing the fix is used.
+
+https://github.com/IfcOpenShell/IfcOpenShell/pull/8141
+---
+diff --git a/src/ifcgeom/kernels/cgal/nef_to_halfspace_tree.h b/src/ifcgeom/kernels/cgal/nef_to_halfspace_tree.h
+index fa410a84f94..368e49a2d2d 100644
+--- a/src/ifcgeom/kernels/cgal/nef_to_halfspace_tree.h
++++ b/src/ifcgeom/kernels/cgal/nef_to_halfspace_tree.h
+@@ -116,6 +116,16 @@ template <typename Kernel>
+ using plane_map = std::map<typename Kernel::Plane_3, typename Kernel::Plane_3, PlaneLess<Kernel>>;
+ // using plane_map = std::unordered_map<typename Kernel::Plane_3, typename Kernel::Plane_3, PlaneHash<Kernel>>;
+ 
++// Lexicographic comparator for CGAL Point_d (operator< is deleted in CGAL 6.x)
++struct Point_d_4d_Less {
++	using Point_d = CGAL::Epick_d<CGAL::Dimension_tag<4>>::Point_d;
++	bool operator()(const Point_d& a, const Point_d& b) const {
++		return std::lexicographical_compare(
++			a.cartesian_begin(), a.cartesian_end(),
++			b.cartesian_begin(), b.cartesian_end());
++	}
++};
++
+ // Snap halfspace planes
+ // search_radius: max cartesian distance in plane equation parameters as 4d points in space
+ template <typename Kernel>
+@@ -131,8 +141,8 @@ plane_map<Kernel> snap_halfspaces(const std::list<CGAL::Plane_3<Kernel>>& planes
+ 
+ 	plane_map<Kernel> result;
+ 
+-	std::map<Point_d, std::set<Point_d>> neighbours;
+-	std::map<Point_d, std::list<CGAL::Plane_3<Kernel>>> originals;
++	std::map<Point_d, std::set<Point_d, Point_d_4d_Less>, Point_d_4d_Less> neighbours;
++	std::map<Point_d, std::list<CGAL::Plane_3<Kernel>>, Point_d_4d_Less> originals;
+ 	std::vector<Point_d> planes_as_point;
+ 
+ 	for (auto& p : planes) {
+@@ -205,7 +215,7 @@ plane_map<Kernel> snap_halfspaces_2(const std::list<CGAL::Plane_3<Kernel>>& plan
+ 	plane_map<Kernel> result;
+ 
+ 	std::vector<Point_d> planes_as_point;
+-	std::map<Point_d, CGAL::Plane_3<Kernel>> normalized_to_original;
++	std::map<Point_d, CGAL::Plane_3<Kernel>, Point_d_4d_Less> normalized_to_original;
+ 
+ 	for (auto& p : planes_fixed) {
+ 		// @todo can we skip normalization (simply divide by largest component perhaps)

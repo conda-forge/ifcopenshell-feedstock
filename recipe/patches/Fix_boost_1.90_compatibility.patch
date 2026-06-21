@@ -1,0 +1,39 @@
+Subject: [PATCH] Fix Boost 1.90 compatibility
+
+Boost 1.90 makes Boost.System fully header-only: conda-forge no longer
+ships a compiled boost_system library or its CMake config
+(boost_system-config.cmake). Two changes are needed for the build to find
+Boost:
+
+1. CMP0167 is forced to NEW so find_package(Boost) uses Boost's own
+   BoostConfig.cmake instead of CMake's legacy FindBoost module. The legacy
+   module carries a hardcoded dependency table that injects `system` as a
+   dependency of thread/filesystem/chrono, which then fails because the
+   boost_system config no longer exists. BoostConfig.cmake has no such
+   reference and still provides the Boost_INCLUDE_DIRS / Boost_LIBRARIES
+   compatibility variables this project relies on.
+
+2. `system` is removed from the explicitly requested components, since it is
+   header-only and has no config to find. Its headers remain available
+   through Boost_INCLUDE_DIRS.
+---
+diff --git a/cmake/CMakeLists.txt b/cmake/CMakeLists.txt
+--- a/cmake/CMakeLists.txt
++++ b/cmake/CMakeLists.txt
+@@ -45,7 +45,7 @@
+     cmake_policy(SET CMP0144 NEW) # find_package() uses upper-case <PACKAGENAME>_ROOT variables.
+ endif()
+ if(POLICY CMP0167) # 3.30
+-    cmake_policy(SET CMP0167 OLD)
++    cmake_policy(SET CMP0167 NEW)
+ endif()
+ 
+ project(IfcOpenShell VERSION ${RELEASE_VERSION})
+@@ -310,7 +310,6 @@
+     # @todo review this, shouldn't this be all possible header-only now?
+     # ... or rewritten using C++17 features?
+     set(BOOST_COMPONENTS
+-        system
+         program_options
+         regex
+         thread
