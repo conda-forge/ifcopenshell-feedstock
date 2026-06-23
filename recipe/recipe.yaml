@@ -1,6 +1,6 @@
 context:
   version: "0.8.5"
-  build: 5
+  build: 6
   python_min: "3.10"
 
 recipe:
