@@ -15,6 +15,7 @@ source:
       - patches/Fix_boost_1.90_compatibility.patch
       - patches/8141-Fix-CGAL-6.x-Point_d-comparator.patch
       - patches/Fix_occt_8.0.0_compatibility.patch
+      - patches/Fix_swig_4.5_compatibility.patch
 
   - url: https://github.com/IfcOpenShell/files/archive/20a17fcf3b1be2bc48af0273f7604af5b7cc4068.tar.gz
     target_directory: test/input

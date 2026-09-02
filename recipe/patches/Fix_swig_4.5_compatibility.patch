@@ -1,0 +1,65 @@
+Subject: [PATCH] Fix build with SWIG 4.5: drop removed Python 2 compatibility helpers
+
+SWIG 4.5.0 finished removing the Python 2 compatibility layer from its
+Python runtime, so the generated wrapper no longer defines
+SWIG_Python_str_FromChar, PyInt_AsLong or PyInt_FromLong. The ifcwrap
+typemaps still call them, which breaks compilation of
+IfcPythonPYTHON_wrap.cxx with errors like:
+
+  error: 'SWIG_Python_str_FromChar' was not declared in this scope
+  error: 'PyInt_AsLong' was not declared in this scope
+  error: 'PyInt_FromLong' was not declared in this scope
+
+Call the Python 3 C-API functions those aliases expanded to instead.
+This is what SWIG itself emitted for Python 3, so behaviour is unchanged
+and the code still builds with older SWIG releases.
+
+Not yet fixed upstream; drop this patch once a release containing an
+equivalent fix is used.
+---
+diff --git a/src/ifcwrap/utils/type_conversion.i b/src/ifcwrap/utils/type_conversion.i
+index 3eacf55..9c19bf9 100644
+--- a/src/ifcwrap/utils/type_conversion.i
++++ b/src/ifcwrap/utils/type_conversion.i
+@@ -64,7 +64,7 @@
+ 
+ 	template <>
+ 	int cast_pyobject(PyObject* element) {
+-		return static_cast<int>(PyInt_AsLong(element));
++		return static_cast<int>(PyLong_AsLong(element));
+ 	}
+ 
+ 	template <>
+@@ -158,8 +158,8 @@
+ 		}
+ 	}
+ 
+-	PyObject* pythonize(const int& t)                   { return PyInt_FromLong(t);                                                                  }
+-	PyObject* pythonize(const unsigned int& t)          { return PyInt_FromLong(t);                                                                  }
++	PyObject* pythonize(const int& t)                   { return PyLong_FromLong(t);                                                                 }
++	PyObject* pythonize(const unsigned int& t)          { return PyLong_FromLong(t);                                                                 }
+ 	PyObject* pythonize(const bool& t)                  { return PyBool_FromLong(t);                                                                 }
+ 	PyObject* pythonize(const boost::logic::tribool& t) { return boost::logic::indeterminate(t) ? PyUnicode_FromString("UNKNOWN") : PyBool_FromLong((bool)t) ;}
+ 	PyObject* pythonize(const double& t)                { return PyFloat_FromDouble(t);                                                              }
+diff --git a/src/ifcwrap/utils/typemaps_out.i b/src/ifcwrap/utils/typemaps_out.i
+index 111e74a..654b8fd 100644
+--- a/src/ifcwrap/utils/typemaps_out.i
++++ b/src/ifcwrap/utils/typemaps_out.i
+@@ -17,7 +17,7 @@
+ 
+ 
+ %typemap(out) IfcUtil::ArgumentType {
+-	$result = SWIG_Python_str_FromChar(IfcUtil::ArgumentTypeToString($1));
++	$result = PyUnicode_FromString(IfcUtil::ArgumentTypeToString($1));
+ }
+ 
+ %typemap(out) IfcParse::declaration* {
+@@ -38,7 +38,7 @@
+ 
+ %typemap(out) IfcParse::simple_type::data_type {
+ 	static const char* const data_type_strings[] = {"binary", "boolean", "integer", "logical", "number", "real", "string"};
+-	$result = SWIG_Python_str_FromChar(data_type_strings[(int)$1]);
++	$result = PyUnicode_FromString(data_type_strings[(int)$1]);
+ }
+ 
+ %typemap(out) AttributeValue {
