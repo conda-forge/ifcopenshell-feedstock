@@ -11,11 +11,11 @@ cxx_compiler:
 gmp:
 - '6'
 hdf5:
-- 1.14.6
+- '2'
 libboost_devel:
 - '1.90'
 libxml2_devel:
-- '2.14'
+- '2.15'
 mpfr:
 - '4'
 occt:
@@ -27,7 +27,7 @@ pin_run_as_build:
 python:
 - 3.14.* *_cp314
 python_min:
-- '3.10'
+- '3.11'
 target_platform:
 - win-64
 zlib:
