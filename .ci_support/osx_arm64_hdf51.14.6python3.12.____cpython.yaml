@@ -5,7 +5,7 @@ MACOSX_SDK_VERSION:
 c_compiler:
 - clang
 c_compiler_version:
-- '19'
+- '21'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -17,7 +17,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '19'
+- '21'
 gmp:
 - '6'
 hdf5:
@@ -25,7 +25,7 @@ hdf5:
 libboost_devel:
 - '1.90'
 libxml2_devel:
-- '2.14'
+- '2.15'
 macos_machine:
 - arm64-apple-darwin20.0.0
 mpfr:
@@ -39,7 +39,7 @@ pin_run_as_build:
 python:
 - 3.12.* *_cpython
 python_min:
-- '3.10'
+- '3.11'
 target_platform:
 - osx-arm64
 zip_keys:
