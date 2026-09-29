@@ -2,15 +2,14 @@ Subject: [PATCH] Use generator expression for zstd target so the build works
  with conda-forge's zstd CMake config (which exports zstd::libzstd_shared
  / ZSTD::ZSTD rather than zstd::libzstd_static).
 ---
-diff --git a/cmake/CMakeLists.txt b/cmake/CMakeLists.txt
---- a/cmake/CMakeLists.txt
-+++ b/cmake/CMakeLists.txt
-@@ -270,7 +270,7 @@
-         find_package(zstd CONFIG REQUIRED)
-         mark_as_advanced(zstd_DIR)
-         message(STATUS "zstd: found at '${zstd_DIR}'.")
--        target_link_libraries(IFCOPENSHELL_RocksDB INTERFACE zstd::libzstd_static)
-+        target_link_libraries(IFCOPENSHELL_RocksDB INTERFACE $<IF:$<TARGET_EXISTS:ZSTD::ZSTD>,ZSTD::ZSTD,$<IF:$<TARGET_EXISTS:zstd::libzstd_static>,zstd::libzstd_static,$<IF:$<TARGET_EXISTS:zstd::libzstd_shared>,zstd::libzstd_shared,zstd>>>)
+diff --git a/src/ifcparse/CMakeLists.txt b/src/ifcparse/CMakeLists.txt
+--- a/src/ifcparse/CMakeLists.txt
++++ b/src/ifcparse/CMakeLists.txt
+@@ -68,6 +68,6 @@
+ if(WITH_ROCKSDB)
+     target_link_libraries(IfcParse ${IFCOPENSHELL_ROCKSDB_TARGET})
+     if(WITH_ZSTD)
+-        target_link_libraries(IfcParse zstd::libzstd_static)
++        target_link_libraries(IfcParse $<IF:$<TARGET_EXISTS:ZSTD::ZSTD>,ZSTD::ZSTD,$<IF:$<TARGET_EXISTS:zstd::libzstd_static>,zstd::libzstd_static,$<IF:$<TARGET_EXISTS:zstd::libzstd_shared>,zstd::libzstd_shared,zstd>>>)
      endif()
-
-     install(TARGETS IFCOPENSHELL_RocksDB EXPORT ${IFCOPENSHELL_EXPORT_TARGETS})
+ endif()

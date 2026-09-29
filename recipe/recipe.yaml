@@ -1,7 +1,6 @@
 context:
-  version: "0.8.5"
-  build: 8
-  python_min: "3.10"
+  version: "0.9.0"
+  build: 0
 
 recipe:
   name: ifcopenshell-packages
@@ -9,29 +8,29 @@ recipe:
 
 source:
   - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/ifcopenshell-python-${{ version }}.tar.gz
-    sha256: 185b97d79c800603685c60abd1497df242050dbb117dcaccbaebdec0cdf25dd5
+    sha256: 0909b0f1fd8f13168bacb47a316afe0caaf360fc67191b6cd87cb2da1bc803bc
     patches:
       - patches/Update_ZSTD_linking_logic.patch
-      - patches/Fix_boost_1.90_compatibility.patch
-      - patches/8141-Fix-CGAL-6.x-Point_d-comparator.patch
-      - patches/Fix_occt_8.0.0_compatibility.patch
-      - patches/Fix_swig_4.5_compatibility.patch
 
-  - url: https://github.com/IfcOpenShell/files/archive/20a17fcf3b1be2bc48af0273f7604af5b7cc4068.tar.gz
+  - url: https://github.com/IfcOpenShell/files/archive/9c2286b8ba8673cab250aaeac85a59c4ae678446.tar.gz
     target_directory: test/input
-    sha256: 668d1849f790075fcbe46669d5c1fc6e9339a6b3bb78f08e0aa4479289f93b70
+    sha256: dab124a634323fecc0abc55c3662e488d63be364641103847cdd58c3a333351f
 
   - url: https://github.com/opensourceBIM/python-mvdxml/archive/83c12fa494b9d6a5a370d8525dc1f76aa5c89d8d.tar.gz
     target_directory: src/ifcopenshell-python/ifcopenshell/mvd
     sha256: 3a332aae707967e609dcab44a118a88ec270c551e7222eb53fc8ba809e9e7a0d
 
+  - url: https://github.com/IfcOpenShell/step-file-parser/archive/9400d243d880dace57490949d74ab1932ce99a09.tar.gz
+    target_directory: src/ifcopenshell-python/ifcopenshell/simple_spf
+    sha256: db5331988f1fb2889e1c11b4ba017408bb90df68ddec7a42afb3a93e8102fd37
+
   - url: https://github.com/IfcOpenShell/ids-test-files/archive/2daf6c46ed9fc7a17259ef6d4c17c3553ef642cd.tar.gz
     target_directory: src/ifcopenshell-python/test/Sample-BIM-Files
     sha256: fc22893af932535d49efe23a1d26c1742ffdba107b1e8a517b2e5c2af5e4d430
 
-  - url: https://github.com/svgpp/svgpp/archive/cb57e8b61dbdbc9a38c15717acb9372aaf5fb0d4.tar.gz
+  - url: https://github.com/svgpp/svgpp/archive/5f1870aa7b757718ff5f86bdfb55966fa4f217f9.tar.gz
     target_directory: src/svgfill/3rdparty/svgpp
-    sha256: b78c9fd184d00488da8d346a838b76f238530323f400acb780a16762700bd309
+    sha256: 8e2c501019a7a89d6227cd769f944807f52b03a2c681a9a0cc094b2cccdaf6af
 
 build:
   number: ${{ build }}
@@ -66,7 +65,6 @@ outputs:
         - occt
         - libxml2-devel
         - cgal-cpp
-        - hdf5
         - eigen
         - mpfr
         - nlohmann_json
@@ -78,7 +76,6 @@ outputs:
         - python
         - shapely
         - typing_extensions
-        - ${{ pin_compatible('hdf5', upper_bound='x.x') }}
         - ${{ pin_compatible('occt', upper_bound='x.x') }}
         - ${{ pin_compatible('cgal-cpp', upper_bound='x.x') }}
       run_exports:
@@ -92,6 +89,7 @@ outputs:
           pip_check: false
       - script:
           - python -c "import ifcopenshell; assert ifcopenshell.version == '${{ version }}', 'print(ifcopenshell.version)'"
+          - python -c "import ifcopenshell.simple_spf"
         requirements:
           run:
             - occt * *novtk*  # Ensure that even though compiled against OCCT with VTK, it can still run with OCCT without VTK
@@ -112,9 +110,13 @@ outputs:
       version: ${{ version }}
     build:
       noarch: python
+      # Use the python variant so conda-smithy keeps one CI job per python on the
+      # noarch platform, and only build this noarch output in the python_min job.
+      variant:
+        use_keys:
+          - python
       skip:
-        - match(python, "<3.10")
-        - match(python, ">=3.14")
+        - not match(python, python_min ~ ".*")
         - build_platform != target_platform
       script: pip install src/bcf -v --no-deps --ignore-installed
     requirements:
@@ -147,7 +149,9 @@ outputs:
 
 about:
   license: LGPL-3.0-or-later
-  license_file: COPYING
+  license_file:
+    - COPYING
+    - src/ifcopenshell-python/ifcopenshell/simple_spf/LICENSE
   summary: IfcOpenShell is a library to support the IFC file format
   description: |
     IfcOpenShell
