@@ -10,6 +10,8 @@ recipe:
 source:
   - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/ifcopenshell-python-${{ version }}.tar.gz
     sha256: 0909b0f1fd8f13168bacb47a316afe0caaf360fc67191b6cd87cb2da1bc803bc
+    patches:
+      - patches/Update_ZSTD_linking_logic.patch
 
   - url: https://github.com/IfcOpenShell/files/archive/9c2286b8ba8673cab250aaeac85a59c4ae678446.tar.gz
     target_directory: test/input
