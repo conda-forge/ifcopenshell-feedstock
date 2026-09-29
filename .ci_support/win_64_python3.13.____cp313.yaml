@@ -10,8 +10,6 @@ cxx_compiler:
 - vs2022
 gmp:
 - '6'
-hdf5:
-- 1.14.6
 libboost_devel:
 - '1.90'
 libxml2_devel:
@@ -25,7 +23,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.14.* *_cp314
+- 3.13.* *_cp313
 python_min:
 - '3.11'
 target_platform:

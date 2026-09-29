@@ -20,14 +20,12 @@ cxx_compiler_version:
 - '21'
 gmp:
 - '6'
-hdf5:
-- '2'
 libboost_devel:
 - '1.90'
 libxml2_devel:
 - '2.15'
 macos_machine:
-- x86_64-apple-darwin13.4.0
+- arm64-apple-darwin20.0.0
 mpfr:
 - '4'
 occt:
@@ -41,7 +39,7 @@ python:
 python_min:
 - '3.11'
 target_platform:
-- osx-64
+- osx-arm64
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
