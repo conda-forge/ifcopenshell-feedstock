@@ -19,6 +19,10 @@ source:
     target_directory: src/ifcopenshell-python/ifcopenshell/mvd
     sha256: 3a332aae707967e609dcab44a118a88ec270c551e7222eb53fc8ba809e9e7a0d
 
+  - url: https://github.com/IfcOpenShell/step-file-parser/archive/9400d243d880dace57490949d74ab1932ce99a09.tar.gz
+    target_directory: src/ifcopenshell-python/ifcopenshell/simple_spf
+    sha256: db5331988f1fb2889e1c11b4ba017408bb90df68ddec7a42afb3a93e8102fd37
+
   - url: https://github.com/IfcOpenShell/ids-test-files/archive/2daf6c46ed9fc7a17259ef6d4c17c3553ef642cd.tar.gz
     target_directory: src/ifcopenshell-python/test/Sample-BIM-Files
     sha256: fc22893af932535d49efe23a1d26c1742ffdba107b1e8a517b2e5c2af5e4d430
@@ -84,6 +88,7 @@ outputs:
           pip_check: false
       - script:
           - python -c "import ifcopenshell; assert ifcopenshell.version == '${{ version }}', 'print(ifcopenshell.version)'"
+          - python -c "import ifcopenshell.simple_spf"
         requirements:
           run:
             - occt * *novtk*  # Ensure that even though compiled against OCCT with VTK, it can still run with OCCT without VTK
@@ -139,7 +144,9 @@ outputs:
 
 about:
   license: LGPL-3.0-or-later
-  license_file: COPYING
+  license_file:
+    - COPYING
+    - src/ifcopenshell-python/ifcopenshell/simple_spf/LICENSE
   summary: IfcOpenShell is a library to support the IFC file format
   description: |
     IfcOpenShell
