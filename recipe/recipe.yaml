@@ -1,7 +1,6 @@
 context:
   version: "0.9.0"
   build: 0
-  python_min: "3.10"
 
 recipe:
   name: ifcopenshell-packages
@@ -111,9 +110,13 @@ outputs:
       version: ${{ version }}
     build:
       noarch: python
+      # Use the python variant so conda-smithy keeps one CI job per python on the
+      # noarch platform, and only build this noarch output in the python_min job.
+      variant:
+        use_keys:
+          - python
       skip:
-        - match(python, "<3.10")
-        - match(python, ">=3.14")
+        - not match(python, python_min ~ ".*")
         - build_platform != target_platform
       script: pip install src/bcf -v --no-deps --ignore-installed
     requirements:
