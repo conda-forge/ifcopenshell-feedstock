@@ -11,14 +11,6 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     export FSUFFIX=so
 fi
 
-# Cmake files from a newer commit (349cbf27) that fixes build issues with HDF5 on osx and linux arch64
-# Copy contents explicitly to avoid creating cmake/cmake/ nesting
-cp "${RECIPE_DIR}/config/cmake/"* "${SRC_DIR}/cmake/"
-
-# Remove the upstream HDF5Config.cmake to prevent it from interfering with our custom FindHDF5.cmake
-# This ensures find_package(HDF5) uses Module mode and finds our new file.
-rm "${SRC_DIR}/cmake/HDF5Config.cmake" || true
-
 cmake ${CMAKE_ARGS} -G Ninja \
  -DSCHEMA_VERSIONS="2x3;4;4x1;4x3_add2" \
  -DCMAKE_BUILD_TYPE=Release \
@@ -32,11 +24,6 @@ cmake ${CMAKE_ARGS} -G Ninja \
  -DMPFR_LIBRARY_DIR=$PREFIX/lib \
  -DOCC_INCLUDE_DIR=$PREFIX/include/opencascade \
  -DOCC_LIBRARY_DIR=$PREFIX/lib \
- -DHDF5_SUPPORT:BOOL=ON \
- -DHDF5_INCLUDE_DIR=$PREFIX/include \
- -DHDF5_LIBRARY_DIR=$PREFIX/lib \
- -DHDF5_C_COMPILER_EXECUTABLE=FALSE \
- -DHDF5_CXX_COMPILER_EXECUTABLE=FALSE \
  -DJSON_INCLUDE_DIR=$PREFIX/include \
  -DCGAL_INCLUDE_DIR=$PREFIX/include \
  -DLIBXML2_INCLUDE_DIR=$PREFIX/include/libxml2 \
