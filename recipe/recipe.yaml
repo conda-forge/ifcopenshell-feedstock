@@ -103,6 +103,15 @@ outputs:
             - networkx
             - tabulate
             - shapely
+      - script:
+          # geom.iterator + geom.create_shape on IFC2X3/IFC4/IFC4X3_ADD2 extrusions and
+          # an IfcAdvancedBrep fixture, each case in its own subprocess so a crash
+          # (e.g. a dyld missing-symbol abort) is reported per case.
+          - python test_geometry.py
+        files:
+          recipe:
+            - test_geometry.py
+            - curved_thick_plate.ifc
 
 
   - package:
