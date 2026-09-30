@@ -1,12 +1,20 @@
 #!/bin/bash
+set -e
 
 # IF osx use file lib suffix .dylib
 # IF linux use file lib suffix .so
 # IF windows use file lib suffix .dll
 
+EXTRA_CMAKE_ARGS=()
 if [ "$(uname)" == "Darwin" ]; then
     export FSUFFIX=dylib
-    export LDFLAGS="$LDFLAGS -Wl,-flat_namespace,-undefined,suppress"
+    # Link everything two-level with all symbols resolved at link time (the
+    # linker default). Do NOT put -flat_namespace / -undefined suppress in
+    # LDFLAGS: that hides missing link dependencies, which then abort at
+    # runtime in dyld (_dyld_missing_symbol_abort) on first use.
+    # Only the SWIG Python extension (the only CMake MODULE target) may leave
+    # the libpython symbols undefined; the interpreter provides them.
+    EXTRA_CMAKE_ARGS+=("-DCMAKE_MODULE_LINKER_FLAGS=${LDFLAGS} -Wl,-undefined,dynamic_lookup")
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     export FSUFFIX=so
 fi
@@ -16,6 +24,7 @@ cmake ${CMAKE_ARGS} -G Ninja \
  -DCMAKE_BUILD_TYPE=Release \
  -DCMAKE_INSTALL_PREFIX=$PREFIX \
  ${CMAKE_PLATFORM_FLAGS[@]} \
+ "${EXTRA_CMAKE_ARGS[@]}" \
  -DCMAKE_PREFIX_PATH=$PREFIX \
  -DCMAKE_SYSTEM_PREFIX_PATH=$PREFIX \
  -DPYTHON_EXECUTABLE:FILEPATH=$PYTHON \
