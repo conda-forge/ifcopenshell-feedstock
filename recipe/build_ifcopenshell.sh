@@ -55,3 +55,9 @@ ninja
 ninja install -j 1
 
 python "${RECIPE_DIR}/update_version_init.py" "${PKG_VERSION}" "${SP_DIR}/ifcopenshell/__init__.py"
+
+if [ "$(uname)" == "Darwin" ]; then
+    # Build-time guard. It runs here rather than in the test phase because
+    # osx-arm64 is cross-compiled on osx-64 and its tests are skipped.
+    bash "${RECIPE_DIR}/check_macho_linkage.sh" install_manifest.txt
+fi
