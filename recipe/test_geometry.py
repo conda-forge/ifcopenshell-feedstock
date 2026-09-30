@@ -1,7 +1,8 @@
 """Runtime smoke test for the ifcopenshell geometry pipeline.
 
-For IFC2X3, IFC4 and IFC4X3_ADD2 this builds a small model with an extruded
-solid (via ``ifcopenshell.api``) and also loads an IfcAdvancedBrep fixture
+For every schema the package builds (IFC2X3, IFC4, IFC4X1, IFC4X3_ADD2), this
+builds a small model with an extruded solid (via ``ifcopenshell.api``), so every
+geometry mapping plug-in is exercised. It also loads an IfcAdvancedBrep fixture
 (``curved_thick_plate.ifc``, IFC4X3_ADD2). Each case runs
 ``ifcopenshell.geom.iterator`` (initialize + iterate) and
 ``ifcopenshell.geom.create_shape``.
@@ -11,8 +12,8 @@ Every case runs in its own subprocess, so a hard crash (e.g. a dyld
 as a named failure instead of killing the test runner.
 
 Regression test for ifcopenshell 0.9.0 build 0 on macOS, where
-``ifcopenshell.geom.iterator`` on an IFC4X3_ADD2 file aborted because the
-libraries were linked with ``-flat_namespace -undefined suppress``.
+``ifcopenshell.geom.iterator`` aborted in every geometry mapping plug-in
+because the libraries were linked with ``-flat_namespace -undefined suppress``.
 """
 
 import os
@@ -26,6 +27,7 @@ ADVANCED_BREP_FIXTURE = os.path.join(HERE, "curved_thick_plate.ifc")
 CASES = {
     "extrusion-IFC2X3": ("IFC2X3", None),
     "extrusion-IFC4": ("IFC4", None),
+    "extrusion-IFC4X1": ("IFC4X1", None),
     "extrusion-IFC4X3_ADD2": ("IFC4X3_ADD2", None),
     "advanced_brep-IFC4X3_ADD2": ("IFC4X3_ADD2", ADVANCED_BREP_FIXTURE),
 }
