@@ -1,6 +1,6 @@
 context:
-  version: "0.9.0"
-  build: 1
+  version: "0.9.0post1"
+  build: 0
 
 recipe:
   name: ifcopenshell-packages
@@ -8,7 +8,7 @@ recipe:
 
 source:
   - url: https://github.com/IfcOpenShell/IfcOpenShell/archive/refs/tags/ifcopenshell-python-${{ version }}.tar.gz
-    sha256: 0909b0f1fd8f13168bacb47a316afe0caaf360fc67191b6cd87cb2da1bc803bc
+    sha256: 2776eef7ddc0137df317f0294623523dc4ccdaba468c172232cfdda13f4e912a
     patches:
       - patches/Update_ZSTD_linking_logic.patch
 
