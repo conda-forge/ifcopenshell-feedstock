@@ -144,6 +144,9 @@ outputs:
           imports:
             - bcf
           pip_check: false
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
       - script:
           - pytest src/bcf/tests
         files:
@@ -152,7 +155,7 @@ outputs:
         requirements:
           run:
             - pytest
-            - python
+            - python ${{ python_min }}.*
             - ifcopenshell
 
 
