@@ -1,6 +1,6 @@
 context:
   version: "0.9.0post1"
-  build: 2
+  build: 3
 
 recipe:
   name: ifcopenshell-packages
@@ -11,6 +11,7 @@ source:
     sha256: 2776eef7ddc0137df317f0294623523dc4ccdaba468c172232cfdda13f4e912a
     patches:
       - patches/Update_ZSTD_linking_logic.patch
+      - patches/Fix_relocated_install_plugin_directory.patch
 
   - url: https://github.com/IfcOpenShell/files/archive/9c2286b8ba8673cab250aaeac85a59c4ae678446.tar.gz
     target_directory: test/input
@@ -90,6 +91,9 @@ outputs:
       - script:
           - python -c "import ifcopenshell; assert ifcopenshell.version == '${{ version }}', 'print(ifcopenshell.version)'"
           - python -c "import ifcopenshell.simple_spf"
+          # schema_names() discovers schema plug-ins through every search path,
+          # including the relocated IFCOPENSHELL_INSTALL_PLUGIN_DIRECTORY.
+          - python -c "import ifcopenshell; n = ifcopenshell.ifcopenshell_wrapper.schema_names(); assert {'IFC2X3', 'IFC4', 'IFC4X3_ADD2'} <= set(n), n"
         requirements:
           run:
             - occt * *novtk*  # Ensure that even though compiled against OCCT with VTK, it can still run with OCCT without VTK

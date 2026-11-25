@@ -1,0 +1,30 @@
+Subject: [PATCH] plugin: read IFCOPENSHELL_INSTALL_PLUGIN_DIRECTORY length at run time
+
+std::filesystem::path(IFCOPENSHELL_INSTALL_PLUGIN_DIRECTORY) lets the
+compiler fold the string length from the literal. conda relocates the
+build prefix by rewriting the literal in place and NUL-padding it, so
+the resulting path is "$PREFIX/lib" followed by NUL bytes. Entries
+discovered under it carry the padding, and dlopen() truncates them at
+the first NUL to "$PREFIX/lib", which makes schema_names() raise
+"boost::dll::shared_library::load() failed".
+---
+diff --git a/src/plugin/plugin.cpp b/src/plugin/plugin.cpp
+index 3a34832..f64e9ea 100644
+--- a/src/plugin/plugin.cpp
++++ b/src/plugin/plugin.cpp
+@@ -363,7 +363,14 @@ PLUGIN_API std::filesystem::path ifcopenshell::plugin::add_search_paths_or_defau
+ 	// install location. This also covers Python installations outside the CMake
+ 	// prefix, such as GitHub Actions' hosted Python.
+ #ifdef IFCOPENSHELL_INSTALL_PLUGIN_DIRECTORY
+-	const auto install_plugin_directory = std::filesystem::path(IFCOPENSHELL_INSTALL_PLUGIN_DIRECTORY);
++	// Relocatable package managers (e.g. conda) rewrite the install prefix
++	// embedded in this literal in place and pad the remainder with NUL bytes.
++	// Read it through a volatile pointer so its length is taken at run time
++	// with strlen(), not folded from the literal's compile-time size, which
++	// would keep the NUL padding in the path (and later truncate dlopen()
++	// arguments to the directory itself).
++	const char* volatile install_plugin_directory_cstr = IFCOPENSHELL_INSTALL_PLUGIN_DIRECTORY;
++	const auto install_plugin_directory = std::filesystem::path(std::string(install_plugin_directory_cstr));
+ 	if (install_plugin_directory != path && std::filesystem::exists(install_plugin_directory)) {
+ 		manager.add_search_path(install_plugin_directory);
+ 	}
